@@ -6,7 +6,7 @@ import Main from './components/Main';
 function App() {
 	const [token, setToken] = useState('');
 
-	const clientID = '21cf846e711745e2a1ea43deb65aaf60';
+	const clientID = '21cf846e711745e2a1ea43deb65aaf60'; //
 	const redirectURI = 'http://localhost:3000/';
 
 	useEffect(() => {
