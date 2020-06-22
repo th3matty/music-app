@@ -37,7 +37,6 @@ function Main({ token }) {
         ))}
       </div>
       <SpotifyPlayer token={token} uris={playURIs} />
-      <div className="lyricsBox"></div>
     </div>
   );
 }
