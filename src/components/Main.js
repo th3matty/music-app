@@ -3,7 +3,7 @@ import SpotifyPlayer from 'react-spotify-web-playback'; // https://github.com/gi
 
 function Main({ token }) {
 	const [releases, setReleases] = useState([]);
-	const [playURIs, setPlayURIs] = useState(['spotify:album:3KhbfZCXAGH3Zih09mAp5e']);
+	const [playURIs, setPlayURIs] = useState([]);
 
 	useEffect(() => {
 		fetch('https://api.spotify.com/v1/browse/new-releases', {
@@ -36,7 +36,7 @@ function Main({ token }) {
 					</div>
 				))}
 			</div>
-			<SpotifyPlayer token={token} uris={playURIs} autoPlay='true' />
+			<SpotifyPlayer token={token} uris={playURIs} />
 		</div>
 	);
 }
