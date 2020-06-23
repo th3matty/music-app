@@ -3,8 +3,11 @@ import SpotifyPlayer from "react-spotify-web-playback"; // https://github.com/gi
 import Aside from "./Aside.js";
 
 function Main({ token }) {
-  const [releases, setReleases] = useState([]);
-  const [playURIs, setPlayURIs] = useState([]);
+
+	const [releases, setReleases] = useState([]);
+	const [playURIs, setPlayURIs] = useState([]);
+	const [play, setPlay] = useState(null);
+
 
   useEffect(() => {
     fetch("https://api.spotify.com/v1/browse/new-releases", {
