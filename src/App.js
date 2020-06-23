@@ -23,7 +23,7 @@ function App() {
 		fetchToken(code);
 	}, []);
 
-	function getAccessToken(token) {
+	function getAccessToken() {
 		let scopes = encodeURIComponent(
 			'streaming user-read-email user-read-private user-read-playback-state user-modify-playback-state'
 		);
