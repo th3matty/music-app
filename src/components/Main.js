@@ -39,7 +39,12 @@ function Main({ token }) {
 					<h2>New Releases</h2>
 					<div>
 						{releases.map(release => (
-							<Album setPlay={setPlay} setPlayURIs={setPlayURIs} release={release} />
+							<Album
+								setPlay={setPlay}
+								setPlayURIs={setPlayURIs}
+								release={release}
+								key={release.id}
+							/>
 						))}
 					</div>
 				</div>
