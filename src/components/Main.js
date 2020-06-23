@@ -43,8 +43,8 @@ function Main({ token }) {
 					</div>
 					<div className="overflow-y-auto">
 						This is the content area
-						<h2>New Releases</h2>
-						<div>
+						<h2 className="title">New Releases</h2>
+						<div className="flex flex-wrap">
 							{releases.map(release => (
 								<Album
 									setPlay={setPlay}
