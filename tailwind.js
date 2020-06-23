@@ -19,10 +19,15 @@ module.exports = {
       white: "#fff",
       // colors for our music app
       gray_aside: "#121212",
+      colorPallete_Blue: '#22577A',
+      colorPallete_LightBlue: '#38A3A5',
+      colorPallete_MintGreen: '#57CC99',
+      colorPallete_LightGreen: '#80ED99',
+      colorPallete_GreenWhite: '#C7F9CC',
       gray_content: "#181818",
       gray_lyrics: "#282828",
       skobelOff: '#0F7173',
-      aside_Text_color: '#80ED99',
+      aside_Text_color: '#80ED99', 
       // maybe more comming
       gray: {
         100: "#f7fafc",

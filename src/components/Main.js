@@ -25,21 +25,16 @@ function Main({ token }) {
 	return (
 		<div className="flex flex-col h-screen text-sm text-gray-400">
 			<div className="flex-1 flex overflow-y-hidden">
-				<div className="sidebar w-48 flex-none flex flex-col justify-between bg-gray_aside font-semibold">
-					<div className="py-6">
+				<div className="sidebar w-48 flex-none flex flex-col bg-gray_aside justify-between font-semibold">
+					<div className="py-6 overflow-y-auto ">
 						here comes our Logo, import it here "main.js"
 						<Aside token={token} />
 					</div>
-					<div className="py-6"></div>
-					<div className="overflow-y-auto bg-scroll container">
-						<p>Playlists</p>
-					</div>
 				</div>
-				<div className="content-area flex-1  bg-gray_content h-screen flex flex-col">
-					{/* <div className="top-bar flex items-center justify-between px-4 py-2"> */}
-					<div className="top-bar flex px-4 py-2 justify-end">
-						<a href="!#" className="mx-4 mt-4">
-							<img src={UserProfileIcon} className="mr-2" alt="UserProfileIcon" />
+				<div className="content-area flex-1  bg-colorPallete_Blue h-screen flex flex-col">
+					<div className="top-bar flex px-4 py-2 justify-end bg-gray_aside">
+						<a href="!#" className=" mt-2">
+							<img src={UserProfileIcon} className="" alt="UserProfileIcon" />
 						</a>
 					</div>
 					<div className="overflow-y-auto">
@@ -57,11 +52,11 @@ function Main({ token }) {
 						</div>
 					</div>
 				</div>
-				<div className=" w-56 bg-skobelOff">
-					{' '}
-					<h2>rechtes frage</h2>
+				<div className=" w-56 bg-colorPallete_LightGreen text-colorPallete_Blue">					
 					<br></br>
 					<h4>PlatzHalter für Osama</h4>
+					
+					<p className=" ml-2 mr-2">
 					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
 					invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
 					accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
@@ -69,6 +64,7 @@ function Main({ token }) {
 					elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
 					diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
 					gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+					</p>
 				</div>
 			</div>
 			<div>
