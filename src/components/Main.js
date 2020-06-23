@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import SpotifyPlayer from "react-spotify-web-playback"; // https://github.com/gilbarbara/react-spotify-web-playback
 import Aside from "./Aside.js";
 import Album from "./Album";
-import LyricsBox from "./lyricsBox/LyricsBox";
 
 function Main({ token }) {
   const [releases, setReleases] = useState([]);
@@ -35,7 +34,7 @@ function Main({ token }) {
             <p>Playlists</p>
           </div>
         </div>
-        <div className="content-area flex-1 overflow-y-auto bg-gray_content">
+        <div className="content-area flex-1 overflow-y-auto bg-gray_content h-screen">
           This is the content area
           <h2>New Releases</h2>
           <div>
@@ -48,11 +47,24 @@ function Main({ token }) {
             ))}
           </div>
         </div>
-        <LyricsBox />
+        <div className=" w-56 bg-gray-600">
+          {" "}
+          <h2>rechtes frage</h2>
+          <br></br>
+          <h4>PlatzHalter für Osama</h4>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          takimata sanctus est Lorem ipsum dolor sit amet.
+        </div>
       </div>
       <div>
-        <div className="bg-gray_lyrics">
-          bottom
+        <div className="">
           <SpotifyPlayer
             token={token}
             uris={playURIs}
