@@ -21,6 +21,7 @@ module.exports = {
       gray_aside: "#121212",
       gray_content: "#181818",
       gray_lyrics: "#282828",
+      skobelOff: '#0F7173',
       // maybe more comming
       gray: {
         100: "#f7fafc",

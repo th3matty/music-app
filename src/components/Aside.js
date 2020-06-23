@@ -80,6 +80,7 @@ class Aside extends Component {
               <input
                 id="inputSearch"
                 className=" ml-3 hover:vbg-green-600 focus:outline-1 focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal "
+                placeholder="Search"
               ></input>
             </a>
           </li>

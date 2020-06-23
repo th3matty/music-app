@@ -34,34 +34,43 @@ function Main({ token }) {
             <p>Playlists</p>
           </div>
         </div>
-        <div className="content-area flex-1 overflow-y-auto bg-gray_content h-screen">
-          This is the content area
-          <h2>New Releases</h2>
-          <div>
-            {releases.map((release) => (
-              <Album
-                setPlay={setPlay}
-                setPlayURIs={setPlayURIs}
-                release={release}
-              />
-            ))}
+        <div className="content-area flex-1  bg-gray_content h-screen flex flex-col">
+        {/* <div className="top-bar flex items-center justify-between px-4 py-2"> */}
+          <div className="top-bar flex px-4 py-2">
+            Unser AppName
+          </div>
+          <div className="flex justify-end">
+            <svg className="" width="20" height="20"></svg>
+            <svg className="" width="20" height="20"></svg>
+          </div>
+          <div className="overflow-y-auto">
+            This is the content area
+            <h2>New Releases</h2>
+            <div>
+              {releases.map((release) => (
+                <Album
+                  setPlay={setPlay}
+                  setPlayURIs={setPlayURIs}
+                  release={release}
+                />
+              ))}
+            </div>
           </div>
         </div>
-        <div className=" w-56 bg-gray-600">
+        <div className=" w-56 bg-skobelOff">
           {" "}
           <h2>rechtes frage</h2>
           <br></br>
           <h4>PlatzHalter für Osama</h4>
-          Lorem ipsum dolor sit amet, consetetur
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
           sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
           dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
           et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-          amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-          At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-          kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-          amet.
+          takimata sanctus est Lorem ipsum dolor sit amet.
         </div>
       </div>
       <div>
