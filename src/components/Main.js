@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from "react";
-import SpotifyPlayer from "react-spotify-web-playback"; // https://github.com/gilbarbara/react-spotify-web-playback
-import Aside from "./Aside.js";
-import Album from "./Album";
+import React, { useEffect, useState } from 'react';
+import SpotifyPlayer from 'react-spotify-web-playback'; // https://github.com/gilbarbara/react-spotify-web-playback
+import Aside from './Aside.js';
+import Album from './Album';
 
 function Main({ token }) {
-  const [releases, setReleases] = useState([]);
-  const [playURIs, setPlayURIs] = useState([]);
-  const [play, setPlay] = useState(null);
+	const [releases, setReleases] = useState([]);
+	const [playURIs, setPlayURIs] = useState([]);
+	const [play, setPlay] = useState(null);
 
-  useEffect(() => {
-    fetch("https://api.spotify.com/v1/browse/new-releases", {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res.albums.items);
-        setReleases(res.albums.items);
-      });
-  }, [token]);
+	useEffect(() => {
+		fetch('https://api.spotify.com/v1/browse/new-releases', {
+			headers: {
+				Authorization: `Bearer ${token}`,
+			},
+		})
+			.then(res => res.json())
+			.then(res => {
+				console.log(res.albums.items);
+				setReleases(res.albums.items);
+			});
+	}, [token]);
 
   return (
     <div className="flex flex-col h-screen text-sm text-gray-400">
