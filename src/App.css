@@ -1,31 +1,31 @@
 .start {
-	background: url('./assets/img/bg-concert.jpg') no-repeat;
-	background-size: cover;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
+  background: url("./assets/img/bg-concert.jpg") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .start h1 {
-	font-size: 2em;
-	color: rgb(53, 47, 47);
+  font-size: 2em;
+  color: rgb(53, 47, 47);
 }
 
 .start button {
-	color: #fff;
-	cursor: pointer;
+  color: #fff;
+  cursor: pointer;
 
-	border: none;
-	box-shadow: grey 2px 2px 2px;
-	background: rgb(39, 219, 69);
-	padding: 10px 25px;
-	border-radius: 25px;
-	font-size: 1.5em;
-	font-weight: bold;
+  border: none;
+  box-shadow: grey 2px 2px 2px;
+  background: rgb(39, 219, 69);
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .start button:hover {
-	transform: scale(1.05);
+  transform: scale(1.05);
 }
