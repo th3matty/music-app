@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SpotifyPlayer from "react-spotify-web-playback"; // https://github.com/gilbarbara/react-spotify-web-playback
 import Aside from "./Aside.js";
 import Album from "./Album";
-
+import LyricsBox from "./lyricsBox/LyricsBox";
 function Main({ token }) {
   const [releases, setReleases] = useState([]);
   const [playURIs, setPlayURIs] = useState([]);
@@ -52,15 +52,7 @@ function Main({ token }) {
           <h2>rechtes frage</h2>
           <br></br>
           <h4>PlatzHalter für Osama</h4>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.
+          <LyricsBox />
         </div>
       </div>
       <div>
