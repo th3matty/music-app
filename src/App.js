@@ -15,7 +15,7 @@ function App() {
 
 	useEffect(() => {
 		const url = window.location.href;
-		const code = url.match(/code=([^&]*)/);
+		const code = url.match(/code=([^&]*)/) ? url.match(/code=([^&]*)/)[1] : null;
 
 		if (!code) {
 			getAccessToken();
@@ -23,7 +23,7 @@ function App() {
 		fetchToken(code);
 	}, []);
 
-	function getAccessToken(token) {
+	function getAccessToken() {
 		let scopes = encodeURIComponent(
 			'streaming user-read-email user-read-private user-read-playback-state user-modify-playback-state'
 		);
@@ -33,7 +33,7 @@ function App() {
 	function fetchToken(code) {
 		const postBody = {
 			grant_type: 'authorization_code',
-			code: code[1],
+			code: code,
 			redirect_uri: redirectURI,
 			client_id: clientID,
 			client_secret: clientSecret,
