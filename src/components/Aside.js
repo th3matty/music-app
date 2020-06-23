@@ -31,8 +31,8 @@ class Aside extends Component {
 				<ul className="right">
 					<hr></hr>
 					<li className="border-l-4 border-green-600">
-						<a href className="flex items-center mx-4 mt-4">
-							<img src={HomeIcon} className="mr-2" alt="HomeIcon"/>
+						<a href="!#" className="flex items-center mx-4 mt-4">
+							<img src={HomeIcon} className="mr-2" alt="HomeIcon" />
 							<button
 								id="homeBtn"
 								className="hover:bg-green-600  focus:outline-none focus:shadow-outline ml-2"
@@ -42,8 +42,8 @@ class Aside extends Component {
 						</a>
 					</li>
 					<li className="border-l-4 border-green-600">
-						<a href className="flex items-center mx-4 mt-4">
-							<img src={SearchIcon} className="mr-3" alt="SearchIcon"/>
+						<a href="!#" className="flex items-center mx-4 mt-4">
+							<img src={SearchIcon} className="mr-3" alt="SearchIcon" />
 							<input
 								id="inputSearch"
 								className=" ml-3 hover:vbg-green-600 focus:outline-1 focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal "
@@ -56,9 +56,7 @@ class Aside extends Component {
 				<p>Your Playlists</p>
 				<div>
 					{this.state.playlists &&
-            this.state.playlists.map(playlist => (
-						<p>{playlist.name}</p>
-					))}
+						this.state.playlists.map(playlist => <p key={playlist.id}>{playlist.name}</p>)}
 				</div>
 			</div>
 		);
