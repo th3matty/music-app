@@ -3,12 +3,10 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import lyricsBox from "./components/lyricsBox/lyricsBox";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <lyricsBox />
   </React.StrictMode>,
   document.getElementById("root")
 );

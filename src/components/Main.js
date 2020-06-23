@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SpotifyPlayer from "react-spotify-web-playback"; // https://github.com/gilbarbara/react-spotify-web-playback
+import LyricsBox from "./lyricsBox/LyricsBox";
 
 function Main({ token }) {
   const [releases, setReleases] = useState([]);
@@ -20,6 +21,7 @@ function Main({ token }) {
 
   return (
     <div>
+      <LyricsBox />
       <h2>New Releases</h2>
       <div>
         {releases.map((release) => (
@@ -36,7 +38,8 @@ function Main({ token }) {
           </div>
         ))}
       </div>
-      <SpotifyPlayer token={token} uris={playURIs} />
+
+      <SpotifyPlayer token={token} uri={playURIs} />
     </div>
   );
 }
