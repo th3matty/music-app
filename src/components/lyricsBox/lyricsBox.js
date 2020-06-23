@@ -1,38 +1,24 @@
 import React from "react";
 import "./LyricsBox.css";
-import { getLyrics } from "genius-lyrics-api";
-
-const options = {
-  apiKey: "itSxkOuCcQpA-yYJReJH5eV8396iOUF1xN5FQGBHiOkqrgp-TgklLUvSIcyZLTB_",
-  title: "Blinding Lights",
-  artist: "The Weeknd",
-  optimizeQuery: true,
-};
 
 class LyricsBox extends React.Component {
-  options = {
-    apiKey: "1gO4r5K5znxDe6UtvyeuIPRynr66reF0FG9jStTmGwRZ1AYbpxNEH8f-tFjuDaeZ",
-    title: "Blinding Lights",
-    artist: "The Weeknd",
-    optimizeQuery: true,
-  };
-
-  /* getSong(options).then((song) =>{
-  console.log(`
-${song.id}
-${song.url}
-${song.albumArt}
-${song.lyrics}`)
-}); */
-
-  handelLyrics() {
-    getLyrics(options).then((lyrics) => console.log(lyrics));
+  token = "778e2dfdfda95a7a548f4ca007ad7898";
+  componentDidMount() {
+    fetch(
+      `https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=15953433&apikey=${this.token}`
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+      });
   }
 
   render() {
     return (
       <div className="lyricsBox">
-        <h1 className="lyricsTitle">lyricsBox</h1>
+        <h1 className="lyricsTitle" onClick={this.handelLyrics}>
+          lyricsBox
+        </h1>
         <p className="lyrics">text</p>
       </div>
     );

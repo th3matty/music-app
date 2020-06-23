@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import SpotifyPlayer from "react-spotify-web-playback"; // https://github.com/gilbarbara/react-spotify-web-playback
 import Aside from "./Aside.js";
 import Album from "./Album";
+import LyricsBox from "./lyricsBox/LyricsBox";
 
 function Main({ token }) {
   const [releases, setReleases] = useState([]);
@@ -47,7 +48,7 @@ function Main({ token }) {
             ))}
           </div>
         </div>
-        Lyrics
+        <LyricsBox />
       </div>
       <div>
         <div className="bg-gray_lyrics">
