@@ -31,7 +31,7 @@ class Aside extends Component {
 				<ul className="right">
 					<hr></hr>
 					<li className="border-l-4 border-green-600">
-						<a href="!#" className="flex items-center mx-4 mt-4">
+						<a href="#!" className="flex items-center mx-4 mt-4">
 							<img src={HomeIcon} className="mr-2" alt="HomeIcon" />
 							<button
 								id="homeBtn"
@@ -42,7 +42,7 @@ class Aside extends Component {
 						</a>
 					</li>
 					<li className="border-l-4 border-green-600">
-						<a href="!#" className="flex items-center mx-4 mt-4">
+						<a href="#!" className="flex items-center mx-4 mt-4">
 							<img src={SearchIcon} className="mr-3" alt="SearchIcon" />
 							<input
 								id="inputSearch"
