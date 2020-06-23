@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SpotifyPlayer from 'react-spotify-web-playback'; // https://github.com/gilbarbara/react-spotify-web-playback
 import Aside from './Aside.js';
 import Album from './Album';
+import UserProfileIcon from '../assets/img/userProfile.svg';
 
 function Main({ token }) {
 	const [releases, setReleases] = useState([]);
@@ -36,14 +37,14 @@ function Main({ token }) {
 				</div>
 				<div className="content-area flex-1  bg-gray_content h-screen flex flex-col">
 					{/* <div className="top-bar flex items-center justify-between px-4 py-2"> */}
-					<div className="top-bar flex px-4 py-2">Unser AppName</div>
-					<div className="flex justify-end">
-						<svg className="" width="20" height="20"></svg>
-						<svg className="" width="20" height="20"></svg>
+					<div className="top-bar flex px-4 py-2 justify-end">
+						<a href="!#" className="mx-4 mt-4">
+							<img src={UserProfileIcon} className="mr-2" alt="UserProfileIcon" />
+						</a>
 					</div>
 					<div className="overflow-y-auto">
 						This is the content area
-						<h2 className="title">New Releases</h2>
+						<h2>New Releases</h2>
 						<div className="flex flex-wrap">
 							{releases.map(release => (
 								<Album
