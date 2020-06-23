@@ -1,36 +1,68 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
-import Start from "./components/Start";
-import Main from "./components/Main";
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import Start from './components/Start';
+import Main from './components/Main';
 
 function App() {
-  const [token, setToken] = useState("");
+    const [accessToken, setAccessToken] = useState('');
 
-  const clientID = "21cf846e711745e2a1ea43deb65aaf60"; //
-  const redirectURI = "http://localhost:3000/";
+    let refreshToken;
+    let expiresIn;
 
-  useEffect(() => {
-    const url = window.location.href;
-    const accessTokenMatch = url.match(/access_token=([^&]*)/);
-    const expiresInMatch = url.match(/expires_in=([^&]*)/);
-    if (accessTokenMatch && expiresInMatch) {
-      setToken(accessTokenMatch[1]);
-      let expiresIn = expiresInMatch[1];
-      window.setTimeout(() => setToken(""), expiresIn * 1000);
+    const clientID = '21cf846e711745e2a1ea43deb65aaf60';
+    const clientSecret = '3ae5854353a24b8781d5bafb196da554';
+    const redirectURI = 'http://localhost:3000/';
+
+    useEffect(() => {
+        const url = window.location.href;
+        const code = url.match(/code=([^&]*)/) ? url.match(/code=([^&]*)/)[1] : null;
+
+        if (!code) {
+            getAccessToken();
+        }
+        fetchToken(code);
+    }, []);
+
+    function getAccessToken() {
+        let scopes = encodeURIComponent(
+            'streaming user-read-email user-read-private user-read-playback-state user-modify-playback-state'
+        );
+        window.location = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=code&scope=${scopes}&redirect_uri=${redirectURI}`;
     }
-  }, []);
 
-  function getAccessToken() {
-    let scopes =
-      "streaming user-read-email user-read-private user-read-playback-state user-modify-playback-state";
-    window.location = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=token&scope=${encodeURIComponent(
-      scopes
-    )}&redirect_uri=${redirectURI}`;
-  }
+    function fetchToken(code) {
+        const postBody = {
+            grant_type: 'authorization_code',
+            code: code,
+            redirect_uri: redirectURI,
+            client_id: clientID,
+            client_secret: clientSecret,
+        };
 
-  return (
-    <>{token ? <Main token={token} /> : <Start getToken={getAccessToken} />}</>
-  );
+        let formBody = [];
+        for (let property in postBody) {
+            let encodedKey = encodeURIComponent(property);
+            let encodedValue = encodeURIComponent(postBody[property]);
+            formBody.push(encodedKey + '=' + encodedValue);
+        }
+        formBody = formBody.join('&');
+
+        fetch('https://accounts.spotify.com/api/token', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: formBody,
+            })
+            .then(res => res.json())
+            .then(json => {
+                setAccessToken(json.access_token);
+                refreshToken = json.refresh_token;
+                expiresIn = json.expires_in;
+            });
+    }
+
+    return < > { accessToken ? < Main token = { accessToken } /> : <Start getToken={getAccessToken} / > } < />;
 }
 
 export default App;
