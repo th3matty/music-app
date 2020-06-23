@@ -15,7 +15,7 @@ function App() {
 
 	useEffect(() => {
 		const url = window.location.href;
-		const code = url.match(/code=([^&]*)/);
+		const code = url.match(/code=([^&]*)/) ? url.match(/code=([^&]*)/)[1] : null;
 
 		if (!code) {
 			getAccessToken();
@@ -33,7 +33,7 @@ function App() {
 	function fetchToken(code) {
 		const postBody = {
 			grant_type: 'authorization_code',
-			code: code[1],
+			code: code,
 			redirect_uri: redirectURI,
 			client_id: clientID,
 			client_secret: clientSecret,

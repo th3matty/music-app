@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SpotifyPlayer from 'react-spotify-web-playback'; // https://github.com/gilbarbara/react-spotify-web-playback
+import Album from './Album';
 
 function Main({ token }) {
 	const [releases, setReleases] = useState([]);
@@ -24,18 +25,7 @@ function Main({ token }) {
 			<h2>New Releases</h2>
 			<div>
 				{releases.map(release => (
-					<div>
-						<h3
-							onClick={() => {
-								console.log(release.uri);
-								setPlayURIs(release.uri);
-								setPlay(true);
-							}}
-						>
-							{release.name}
-						</h3>
-						<p>{release.artists[0].name}</p>
-					</div>
+					<Album setPlay={setPlay} setPlayURIs={setPlayURIs} release={release} />
 				))}
 			</div>
 			<SpotifyPlayer
