@@ -48,14 +48,7 @@ function Main({ token }) {
 			<div>
 				<div className='bg-gray_lyrics'>
 					bottom
-					<SpotifyPlayer
-						token={token}
-						uris={playURIs}
-						play={play}
-						callback={data => {
-							setPlay(data.isPlaying);
-						}}
-					/>
+					<SpotifyPlayer token={token} uris={playURIs} play={play} />
 				</div>
 			</div>
 		</div>
