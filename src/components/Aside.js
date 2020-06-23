@@ -55,7 +55,8 @@ class Aside extends Component {
 				<hr></hr>
 				<p>Your Playlists</p>
 				<div>
-					{this.state.playlists.map(playlist => (
+					{this.state.playlists &&
+            this.state.playlists.map(playlist => (
 						<p>{playlist.name}</p>
 					))}
 				</div>
