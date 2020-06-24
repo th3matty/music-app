@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
 import "./App.css";
 import Start from "./components/Start";
 import Main from "./components/Main";

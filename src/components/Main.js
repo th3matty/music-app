@@ -28,7 +28,7 @@ function Main({ token }) {
         <div className="sidebar w-48 flex-none flex flex-col justify-between bg-gray_aside font-semibold">
           <div className="py-6">
             here comes our Logo, import it here "main.js"
-            <Aside />
+            <Aside token={token} />
           </div>
           <div className="py-6"></div>
           <div className="overflow-y-auto bg-scroll container">
