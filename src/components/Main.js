@@ -29,7 +29,7 @@ function Main({ token }) {
 		<div className="text-sm text-gray-400 flex flex-wrap">
 			<Aside token={token} />
 
-			<div className="flex-1 content-area overflow-y-auto bg-gray_content h-screen">
+			<div className="flex-1 content-area overflow-y-auto bg-colorPallete_Blue h-screen">
 				<div className="top-bar flex px-4 py-2 justify-end bg-gray_aside">
 					<a href="!#" className=" mt-2">
 						<img src={UserProfileIcon} className="" alt="UserProfileIcon" />
