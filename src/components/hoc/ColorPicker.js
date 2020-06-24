@@ -1,5 +1,6 @@
 import React from 'react';
 import { TwitterPicker } from 'react-color';
+import PinselIcon from '../../assets/img/pinsel.svg';
 
 function withColorPicker(Component) {
 	return class extends React.Component {
@@ -15,21 +16,30 @@ function withColorPicker(Component) {
 			this.setState({ color: color.hex });
 		};
 
-		render() {
-			const popover = {
-				position: 'absolute',
-				zIndex: '2',
-			};
+		handleClose = () => {
+			this.setState({ showPicker: false });
+		};
 
+		render() {
 			return (
 				<div style={{ backgroundColor: this.state.color }}>
 					<Component {...this.props} />
 					{this.state.showPicker && (
-						<div style={popover}>
-							<TwitterPicker color={this.state.color} onChangeComplete={this.changeHandler} />
+						<div className="absolute z-2 left-1/2">
+							<div className="fixed inset-0" onClick={this.handleClose} />
+							<TwitterPicker
+								triangle="hide"
+								color={this.state.color}
+								onChangeComplete={this.changeHandler}
+							/>
 						</div>
 					)}
-					<span onClick={() => this.setState({ showPicker: !this.state.showPicker })}>C</span>
+					<span
+						className="absolute right-0 bottom-0 cursor-pointer"
+						onClick={() => this.setState({ showPicker: !this.state.showPicker })}
+					>
+						<img src={PinselIcon} />
+					</span>
 				</div>
 			);
 		}

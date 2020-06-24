@@ -25,7 +25,7 @@ function Main({ token }) {
 	return (
 		<div className="flex flex-col h-screen text-sm text-gray-400">
 			<div className="flex-1 flex overflow-y-hidden">
-				<div className="sidebar w-48 flex-none flex flex-col bg-gray_aside justify-between font-semibold">
+				<div className="sidebar w-48 flex-none flex flex-col bg-gray_aside justify-between font-semibold relative">
 					<div className="py-6 overflow-y-auto ">
 						here comes our Logo, import it here "main.js"
 						<Aside token={token} />
