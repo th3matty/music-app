@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import SpotifyPlayer from 'react-spotify-web-playback'; // https://github.com/gilbarbara/react-spotify-web-playback
 import Aside from './Aside.js';
-import Album from './Album';
+import UserProfileIcon from '../assets/img/userProfile.svg';
+import TopView from './TopMainView.js';
 import LyricsBox from './lyricsBox/lyricsBox';
 
 function Main({ token }) {
@@ -29,12 +30,14 @@ function Main({ token }) {
 			<Aside token={token} />
 
 			<div className="flex-1 content-area overflow-y-auto bg-gray_content h-screen">
-				This is the content area
-				<h2>New Releases</h2>
-				<div className="flex flex-wrap">
-					{releases.map(release => (
-						<Album setPlay={setPlay} setPlayURIs={setPlayURIs} release={release} />
-					))}
+				<div className="top-bar flex px-4 py-2 justify-end bg-gray_aside">
+					<a href="!#" className=" mt-2">
+						<img src={UserProfileIcon} className="" alt="UserProfileIcon" />
+					</a>
+				</div>
+				<div className="TopView">
+					{/* ContentAREA //<-- TOPVIEW-->//*/}
+					<TopView setPlay={setPlay} setPlayURIs={setPlayURIs} releases={releases} />
 				</div>
 			</div>
 
