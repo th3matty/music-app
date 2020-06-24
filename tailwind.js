@@ -723,7 +723,7 @@ module.exports = {
     whitespace: ["responsive"],
     width: ["responsive"],
     wordBreak: ["responsive"],
-    zIndex: ["responsive"],
+    zIndex: ["responsive", "hover", "focus"],
     gap: ["responsive"],
     gridAutoFlow: ["responsive"],
     gridTemplateColumns: ["responsive"],
