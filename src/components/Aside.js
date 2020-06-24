@@ -62,11 +62,7 @@ class Aside extends Component {
 								))}
 						</div>
 					</div>
-				</div>
-				<div className="py-6"></div>
-				<div className="overflow-y-auto bg-scroll container">
-					<p>Playlists</p>
-				</div>
+				</div>				
 			</div>
 		);
 	}
