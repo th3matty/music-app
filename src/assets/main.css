@@ -22,10 +22,7 @@ html {
 
 body {
   margin: 0;
-  scrollbar-width: thin;
-  scrollbar-color: #57CC99 #000
 }
-
 
 /**
  * Render the `main` element consistently in IE.
