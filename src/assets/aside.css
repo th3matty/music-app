@@ -1,9 +1,8 @@
-#homeBtn{
-    border-radius: 2px;
-    
+#homeBtn {
+  border-radius: 2px;
 }
-#inputSearch{
-    width : 100px;
+#inputSearch {
+  width: 110px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
