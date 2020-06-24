@@ -34,7 +34,9 @@ class Aside extends Component {
             <a href="#!" className="flex items-center mx-4 mt-4">
               <img src={HomeIcon} className="mr-2" alt="HomeIcon" />
               <button id="homeBtn" className=" ml-2">
-                <span className="text-colorPallete_LightGreen text-lg">Home</span>
+                <span className="text-colorPallete_LightGreen text-lg">
+                  Home
+                </span>
               </button>
             </a>
           </li>
@@ -49,11 +51,15 @@ class Aside extends Component {
           </li>
         </ul>
         <hr className="mt-3 mb-3"></hr>
-        <p className="text-colorPallete_MintGreen mb-3 mt-5 text-lg ml-2">Your Playlists</p>
+        <p className="text-colorPallete_MintGreen mb-3 mt-5 text-lg ml-2">
+          Your Playlists
+        </p>
         <div className="">
           {this.state.playlists &&
             this.state.playlists.map((playlist) => (
-              <p key={playlist.id} className="text-sm ml-2">{playlist.name}</p>
+              <p key={playlist.id} className="text-sm ml-2">
+                {playlist.name}
+              </p>
             ))}
         </div>
       </div>

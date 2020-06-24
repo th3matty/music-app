@@ -3,12 +3,15 @@ import SpotifyPlayer from "react-spotify-web-playback"; // https://github.com/gi
 import Aside from "./Aside.js";
 import UserProfileIcon from "../assets/img/userProfile.svg";
 import TopView from "./TopMainView.js";
+import LyricsBox from "./lyricsBox/lyricsBox";
+
 
 function Main({ token }) {
   const [releases, setReleases] = useState([]);
   const [playURIs, setPlayURIs] = useState([]);
   const [play, setPlay] = useState(null);
-
+  const [songTitle, setTitle] = useState("");
+  const [songArtist, setArtist] = useState("");
   useEffect(() => {
     fetch("https://api.spotify.com/v1/browse/new-releases", {
       headers: {
@@ -39,24 +42,16 @@ function Main({ token }) {
           </div>
           <div className="TopView">
             {/* ContentAREA //<-- TOPVIEW-->//*/}
-            <TopView setPlay={setPlay} setPlayURIs={setPlayURIs} releases={releases} />
+            <TopView
+              setPlay={setPlay}
+              setPlayURIs={setPlayURIs}
+              releases={releases}
+            />
           </div>
         </div>
-        <div className=" w-56 bg-colorPallete_LightGreen text-colorPallete_Blue">
-          <br></br>
-          <h4>PlatzHalter für Osama</h4>
 
-          <p className=" ml-2 mr-2">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet.
-          </p>
+        <div className=" w-56 bg-gray-600">
+          <LyricsBox token={token} title={songTitle} artist={songArtist} />
         </div>
       </div>
       <div>
@@ -66,7 +61,8 @@ function Main({ token }) {
             uris={playURIs}
             play={play}
             callback={(data) => {
-              setPlay(data.isPlaying);
+              setTitle(data.track.name);
+              setArtist(data.track.artists);
             }}
           />
         </div>
