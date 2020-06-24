@@ -52,33 +52,33 @@ function Main({ token }) {
 						</div>
 					</div>
 				</div>
-				<div className=" w-56 bg-colorPallete_LightGreen text-colorPallete_Blue">					
+				<div className=" w-56 bg-colorPallete_LightGreen text-colorPallete_Blue">
 					<br></br>
 					<h4>PlatzHalter für Osama</h4>
-					
+
 					<p className=" ml-2 mr-2">
-					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-					invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-					accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-					sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-					elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-					diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-					gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+						invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+						accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+						sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+						sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+						aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+						rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+						amet.
 					</p>
 				</div>
 			</div>
 			<div>
-				<div className="">
-					<SpotifyPlayer
-						token={token}
-						uris={playURIs}
-						play={play}
-						callback={data => {
-							setPlay(data.isPlaying);
-						}}
-					/>
-				</div>
+				<div className=""></div>
 			</div>
+			<SpotifyPlayer
+				token={token}
+				uris={playURIs}
+				play={play}
+				callback={data => {
+					setPlay(data.isPlaying);
+				}}
+			/>
 		</div>
 	);
 }
