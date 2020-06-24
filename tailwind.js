@@ -14,7 +14,7 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-
+      Emoji: "💫",
       black: "#000",
       white: "#fff",
       // colors for our music app

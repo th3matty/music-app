@@ -13,8 +13,8 @@ class TopView extends Component {
       >
         {" "}
         <p className="justify-start text-base text-colorPallete_LightGreen">New Releases</p>
-        <div id="container2" className="container overflow-x-auto">
-          <div className="flex ml-10 mr-10 group z-0">
+        <div id="container2" className="container overflow-x-auto overflow-y-hidden">
+          <div className="flex ml-10 mr-10">
             {this.props.releases.map((release) => (
               <Album
                 setPlay={this.props.setPlay}

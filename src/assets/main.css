@@ -1134,6 +1134,10 @@ video {
   border-color: currentColor;
 }
 
+.divide-Emoji > :not(template) ~ :not(template) {
+  border-color: 💫;
+}
+
 .divide-black > :not(template) ~ :not(template) {
   --divide-opacity: 1;
   border-color: #000;
@@ -1838,6 +1842,10 @@ video {
   background-color: currentColor;
 }
 
+.bg-Emoji {
+  background-color: 💫;
+}
+
 .bg-black {
   --bg-opacity: 1;
   background-color: #000;
@@ -2458,6 +2466,10 @@ video {
   background-color: currentColor;
 }
 
+.hover\:bg-Emoji:hover {
+  background-color: 💫;
+}
+
 .hover\:bg-black:hover {
   --bg-opacity: 1;
   background-color: #000;
@@ -3076,6 +3088,10 @@ video {
 
 .focus\:bg-current:focus {
   background-color: currentColor;
+}
+
+.focus\:bg-Emoji:focus {
+  background-color: 💫;
 }
 
 .focus\:bg-black:focus {
@@ -3838,6 +3854,10 @@ video {
   border-color: currentColor;
 }
 
+.border-Emoji {
+  border-color: 💫;
+}
+
 .border-black {
   --border-opacity: 1;
   border-color: #000;
@@ -4458,6 +4478,10 @@ video {
   border-color: currentColor;
 }
 
+.hover\:border-Emoji:hover {
+  border-color: 💫;
+}
+
 .hover\:border-black:hover {
   --border-opacity: 1;
   border-color: #000;
@@ -5076,6 +5100,10 @@ video {
 
 .focus\:border-current:focus {
   border-color: currentColor;
+}
+
+.focus\:border-Emoji:focus {
+  border-color: 💫;
 }
 
 .focus\:border-black:focus {
@@ -8770,6 +8798,10 @@ video {
   color: currentColor;
 }
 
+.placeholder-Emoji::placeholder {
+  color: 💫;
+}
+
 .placeholder-black::placeholder {
   --placeholder-opacity: 1;
   color: #000;
@@ -9388,6 +9420,10 @@ video {
 
 .focus\:placeholder-current:focus::placeholder {
   color: currentColor;
+}
+
+.focus\:placeholder-Emoji:focus::placeholder {
+  color: 💫;
 }
 
 .focus\:placeholder-black:focus::placeholder {
@@ -10324,6 +10360,10 @@ video {
   color: currentColor;
 }
 
+.text-Emoji {
+  color: 💫;
+}
+
 .text-black {
   --text-opacity: 1;
   color: #000;
@@ -10944,6 +10984,10 @@ video {
   color: currentColor;
 }
 
+.hover\:text-Emoji:hover {
+  color: 💫;
+}
+
 .hover\:text-black:hover {
   --text-opacity: 1;
   color: #000;
@@ -11562,6 +11606,10 @@ video {
 
 .focus\:text-current:focus {
   color: currentColor;
+}
+
+.focus\:text-Emoji:focus {
+  color: 💫;
 }
 
 .focus\:text-black:focus {
@@ -15648,6 +15696,10 @@ video {
     border-color: currentColor;
   }
 
+  .sm\:divide-Emoji > :not(template) ~ :not(template) {
+    border-color: 💫;
+  }
+
   .sm\:divide-black > :not(template) ~ :not(template) {
     --divide-opacity: 1;
     border-color: #000;
@@ -16352,6 +16404,10 @@ video {
     background-color: currentColor;
   }
 
+  .sm\:bg-Emoji {
+    background-color: 💫;
+  }
+
   .sm\:bg-black {
     --bg-opacity: 1;
     background-color: #000;
@@ -16972,6 +17028,10 @@ video {
     background-color: currentColor;
   }
 
+  .sm\:hover\:bg-Emoji:hover {
+    background-color: 💫;
+  }
+
   .sm\:hover\:bg-black:hover {
     --bg-opacity: 1;
     background-color: #000;
@@ -17590,6 +17650,10 @@ video {
 
   .sm\:focus\:bg-current:focus {
     background-color: currentColor;
+  }
+
+  .sm\:focus\:bg-Emoji:focus {
+    background-color: 💫;
   }
 
   .sm\:focus\:bg-black:focus {
@@ -18352,6 +18416,10 @@ video {
     border-color: currentColor;
   }
 
+  .sm\:border-Emoji {
+    border-color: 💫;
+  }
+
   .sm\:border-black {
     --border-opacity: 1;
     border-color: #000;
@@ -18972,6 +19040,10 @@ video {
     border-color: currentColor;
   }
 
+  .sm\:hover\:border-Emoji:hover {
+    border-color: 💫;
+  }
+
   .sm\:hover\:border-black:hover {
     --border-opacity: 1;
     border-color: #000;
@@ -19590,6 +19662,10 @@ video {
 
   .sm\:focus\:border-current:focus {
     border-color: currentColor;
+  }
+
+  .sm\:focus\:border-Emoji:focus {
+    border-color: 💫;
   }
 
   .sm\:focus\:border-black:focus {
@@ -23284,6 +23360,10 @@ video {
     color: currentColor;
   }
 
+  .sm\:placeholder-Emoji::placeholder {
+    color: 💫;
+  }
+
   .sm\:placeholder-black::placeholder {
     --placeholder-opacity: 1;
     color: #000;
@@ -23902,6 +23982,10 @@ video {
 
   .sm\:focus\:placeholder-current:focus::placeholder {
     color: currentColor;
+  }
+
+  .sm\:focus\:placeholder-Emoji:focus::placeholder {
+    color: 💫;
   }
 
   .sm\:focus\:placeholder-black:focus::placeholder {
@@ -24838,6 +24922,10 @@ video {
     color: currentColor;
   }
 
+  .sm\:text-Emoji {
+    color: 💫;
+  }
+
   .sm\:text-black {
     --text-opacity: 1;
     color: #000;
@@ -25458,6 +25546,10 @@ video {
     color: currentColor;
   }
 
+  .sm\:hover\:text-Emoji:hover {
+    color: 💫;
+  }
+
   .sm\:hover\:text-black:hover {
     --text-opacity: 1;
     color: #000;
@@ -26076,6 +26168,10 @@ video {
 
   .sm\:focus\:text-current:focus {
     color: currentColor;
+  }
+
+  .sm\:focus\:text-Emoji:focus {
+    color: 💫;
   }
 
   .sm\:focus\:text-black:focus {
@@ -30163,6 +30259,10 @@ video {
     border-color: currentColor;
   }
 
+  .md\:divide-Emoji > :not(template) ~ :not(template) {
+    border-color: 💫;
+  }
+
   .md\:divide-black > :not(template) ~ :not(template) {
     --divide-opacity: 1;
     border-color: #000;
@@ -30867,6 +30967,10 @@ video {
     background-color: currentColor;
   }
 
+  .md\:bg-Emoji {
+    background-color: 💫;
+  }
+
   .md\:bg-black {
     --bg-opacity: 1;
     background-color: #000;
@@ -31487,6 +31591,10 @@ video {
     background-color: currentColor;
   }
 
+  .md\:hover\:bg-Emoji:hover {
+    background-color: 💫;
+  }
+
   .md\:hover\:bg-black:hover {
     --bg-opacity: 1;
     background-color: #000;
@@ -32105,6 +32213,10 @@ video {
 
   .md\:focus\:bg-current:focus {
     background-color: currentColor;
+  }
+
+  .md\:focus\:bg-Emoji:focus {
+    background-color: 💫;
   }
 
   .md\:focus\:bg-black:focus {
@@ -32867,6 +32979,10 @@ video {
     border-color: currentColor;
   }
 
+  .md\:border-Emoji {
+    border-color: 💫;
+  }
+
   .md\:border-black {
     --border-opacity: 1;
     border-color: #000;
@@ -33487,6 +33603,10 @@ video {
     border-color: currentColor;
   }
 
+  .md\:hover\:border-Emoji:hover {
+    border-color: 💫;
+  }
+
   .md\:hover\:border-black:hover {
     --border-opacity: 1;
     border-color: #000;
@@ -34105,6 +34225,10 @@ video {
 
   .md\:focus\:border-current:focus {
     border-color: currentColor;
+  }
+
+  .md\:focus\:border-Emoji:focus {
+    border-color: 💫;
   }
 
   .md\:focus\:border-black:focus {
@@ -37799,6 +37923,10 @@ video {
     color: currentColor;
   }
 
+  .md\:placeholder-Emoji::placeholder {
+    color: 💫;
+  }
+
   .md\:placeholder-black::placeholder {
     --placeholder-opacity: 1;
     color: #000;
@@ -38417,6 +38545,10 @@ video {
 
   .md\:focus\:placeholder-current:focus::placeholder {
     color: currentColor;
+  }
+
+  .md\:focus\:placeholder-Emoji:focus::placeholder {
+    color: 💫;
   }
 
   .md\:focus\:placeholder-black:focus::placeholder {
@@ -39353,6 +39485,10 @@ video {
     color: currentColor;
   }
 
+  .md\:text-Emoji {
+    color: 💫;
+  }
+
   .md\:text-black {
     --text-opacity: 1;
     color: #000;
@@ -39973,6 +40109,10 @@ video {
     color: currentColor;
   }
 
+  .md\:hover\:text-Emoji:hover {
+    color: 💫;
+  }
+
   .md\:hover\:text-black:hover {
     --text-opacity: 1;
     color: #000;
@@ -40591,6 +40731,10 @@ video {
 
   .md\:focus\:text-current:focus {
     color: currentColor;
+  }
+
+  .md\:focus\:text-Emoji:focus {
+    color: 💫;
   }
 
   .md\:focus\:text-black:focus {
@@ -44678,6 +44822,10 @@ video {
     border-color: currentColor;
   }
 
+  .lg\:divide-Emoji > :not(template) ~ :not(template) {
+    border-color: 💫;
+  }
+
   .lg\:divide-black > :not(template) ~ :not(template) {
     --divide-opacity: 1;
     border-color: #000;
@@ -45382,6 +45530,10 @@ video {
     background-color: currentColor;
   }
 
+  .lg\:bg-Emoji {
+    background-color: 💫;
+  }
+
   .lg\:bg-black {
     --bg-opacity: 1;
     background-color: #000;
@@ -46002,6 +46154,10 @@ video {
     background-color: currentColor;
   }
 
+  .lg\:hover\:bg-Emoji:hover {
+    background-color: 💫;
+  }
+
   .lg\:hover\:bg-black:hover {
     --bg-opacity: 1;
     background-color: #000;
@@ -46620,6 +46776,10 @@ video {
 
   .lg\:focus\:bg-current:focus {
     background-color: currentColor;
+  }
+
+  .lg\:focus\:bg-Emoji:focus {
+    background-color: 💫;
   }
 
   .lg\:focus\:bg-black:focus {
@@ -47382,6 +47542,10 @@ video {
     border-color: currentColor;
   }
 
+  .lg\:border-Emoji {
+    border-color: 💫;
+  }
+
   .lg\:border-black {
     --border-opacity: 1;
     border-color: #000;
@@ -48002,6 +48166,10 @@ video {
     border-color: currentColor;
   }
 
+  .lg\:hover\:border-Emoji:hover {
+    border-color: 💫;
+  }
+
   .lg\:hover\:border-black:hover {
     --border-opacity: 1;
     border-color: #000;
@@ -48620,6 +48788,10 @@ video {
 
   .lg\:focus\:border-current:focus {
     border-color: currentColor;
+  }
+
+  .lg\:focus\:border-Emoji:focus {
+    border-color: 💫;
   }
 
   .lg\:focus\:border-black:focus {
@@ -52314,6 +52486,10 @@ video {
     color: currentColor;
   }
 
+  .lg\:placeholder-Emoji::placeholder {
+    color: 💫;
+  }
+
   .lg\:placeholder-black::placeholder {
     --placeholder-opacity: 1;
     color: #000;
@@ -52932,6 +53108,10 @@ video {
 
   .lg\:focus\:placeholder-current:focus::placeholder {
     color: currentColor;
+  }
+
+  .lg\:focus\:placeholder-Emoji:focus::placeholder {
+    color: 💫;
   }
 
   .lg\:focus\:placeholder-black:focus::placeholder {
@@ -53868,6 +54048,10 @@ video {
     color: currentColor;
   }
 
+  .lg\:text-Emoji {
+    color: 💫;
+  }
+
   .lg\:text-black {
     --text-opacity: 1;
     color: #000;
@@ -54488,6 +54672,10 @@ video {
     color: currentColor;
   }
 
+  .lg\:hover\:text-Emoji:hover {
+    color: 💫;
+  }
+
   .lg\:hover\:text-black:hover {
     --text-opacity: 1;
     color: #000;
@@ -55106,6 +55294,10 @@ video {
 
   .lg\:focus\:text-current:focus {
     color: currentColor;
+  }
+
+  .lg\:focus\:text-Emoji:focus {
+    color: 💫;
   }
 
   .lg\:focus\:text-black:focus {
@@ -59193,6 +59385,10 @@ video {
     border-color: currentColor;
   }
 
+  .xl\:divide-Emoji > :not(template) ~ :not(template) {
+    border-color: 💫;
+  }
+
   .xl\:divide-black > :not(template) ~ :not(template) {
     --divide-opacity: 1;
     border-color: #000;
@@ -59897,6 +60093,10 @@ video {
     background-color: currentColor;
   }
 
+  .xl\:bg-Emoji {
+    background-color: 💫;
+  }
+
   .xl\:bg-black {
     --bg-opacity: 1;
     background-color: #000;
@@ -60517,6 +60717,10 @@ video {
     background-color: currentColor;
   }
 
+  .xl\:hover\:bg-Emoji:hover {
+    background-color: 💫;
+  }
+
   .xl\:hover\:bg-black:hover {
     --bg-opacity: 1;
     background-color: #000;
@@ -61135,6 +61339,10 @@ video {
 
   .xl\:focus\:bg-current:focus {
     background-color: currentColor;
+  }
+
+  .xl\:focus\:bg-Emoji:focus {
+    background-color: 💫;
   }
 
   .xl\:focus\:bg-black:focus {
@@ -61897,6 +62105,10 @@ video {
     border-color: currentColor;
   }
 
+  .xl\:border-Emoji {
+    border-color: 💫;
+  }
+
   .xl\:border-black {
     --border-opacity: 1;
     border-color: #000;
@@ -62517,6 +62729,10 @@ video {
     border-color: currentColor;
   }
 
+  .xl\:hover\:border-Emoji:hover {
+    border-color: 💫;
+  }
+
   .xl\:hover\:border-black:hover {
     --border-opacity: 1;
     border-color: #000;
@@ -63135,6 +63351,10 @@ video {
 
   .xl\:focus\:border-current:focus {
     border-color: currentColor;
+  }
+
+  .xl\:focus\:border-Emoji:focus {
+    border-color: 💫;
   }
 
   .xl\:focus\:border-black:focus {
@@ -66829,6 +67049,10 @@ video {
     color: currentColor;
   }
 
+  .xl\:placeholder-Emoji::placeholder {
+    color: 💫;
+  }
+
   .xl\:placeholder-black::placeholder {
     --placeholder-opacity: 1;
     color: #000;
@@ -67447,6 +67671,10 @@ video {
 
   .xl\:focus\:placeholder-current:focus::placeholder {
     color: currentColor;
+  }
+
+  .xl\:focus\:placeholder-Emoji:focus::placeholder {
+    color: 💫;
   }
 
   .xl\:focus\:placeholder-black:focus::placeholder {
@@ -68383,6 +68611,10 @@ video {
     color: currentColor;
   }
 
+  .xl\:text-Emoji {
+    color: 💫;
+  }
+
   .xl\:text-black {
     --text-opacity: 1;
     color: #000;
@@ -69003,6 +69235,10 @@ video {
     color: currentColor;
   }
 
+  .xl\:hover\:text-Emoji:hover {
+    color: 💫;
+  }
+
   .xl\:hover\:text-black:hover {
     --text-opacity: 1;
     color: #000;
@@ -69621,6 +69857,10 @@ video {
 
   .xl\:focus\:text-current:focus {
     color: currentColor;
+  }
+
+  .xl\:focus\:text-Emoji:focus {
+    color: 💫;
   }
 
   .xl\:focus\:text-black:focus {

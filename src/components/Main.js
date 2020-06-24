@@ -50,7 +50,7 @@ function Main({ token }) {
           </div>
         </div>
 
-        <div className=" w-56 bg-gray-600">
+        <div className=" w-56 bg-colorPallete_LightGreen">
           <LyricsBox token={token} title={songTitle} artist={songArtist} />
         </div>
       </div>
