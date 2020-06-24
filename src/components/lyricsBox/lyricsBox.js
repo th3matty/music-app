@@ -43,13 +43,3 @@ class LyricsBox extends React.Component {
 }
 
 export default LyricsBox;
-
-/* .then(
-        fetch(
-          `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=15953433&apikey=${this.state.accessToken}`
-        )
-          .then((res) => res.json())
-          .then((res) => {
-            console.log(res.message.body.lyrics.lyrics_body);
-          })
-      ); */
