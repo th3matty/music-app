@@ -25,13 +25,13 @@ function Main({ token }) {
 	}, [token]);
 
 	return (
-		<div className="text-sm text-gray-400 overflow-y-hidden flex flex-wrap">
+		<div className="text-sm text-gray-400 flex flex-wrap">
 			<Aside token={token} />
 
 			<div className="flex-1 content-area overflow-y-auto bg-gray_content h-screen">
 				This is the content area
 				<h2>New Releases</h2>
-				<div>
+				<div className="flex flex-wrap">
 					{releases.map(release => (
 						<Album setPlay={setPlay} setPlayURIs={setPlayURIs} release={release} />
 					))}
@@ -40,7 +40,7 @@ function Main({ token }) {
 
 			<LyricsBox token={token} title={songTitle} artist={songArtist} />
 
-			<div className="w-full">
+			<div className="w-full fixed bottom-0">
 				<SpotifyPlayer
 					token={token}
 					uris={playURIs}
