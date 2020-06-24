@@ -7,7 +7,8 @@ function Main({ token }) {
   const [releases, setReleases] = useState([]);
   const [playURIs, setPlayURIs] = useState([]);
   const [play, setPlay] = useState(null);
-
+  const [songTitle, setTitle] = useState("");
+  const [songArtist, setArtist] = useState("");
   useEffect(() => {
     fetch("https://api.spotify.com/v1/browse/new-releases", {
       headers: {
@@ -52,7 +53,7 @@ function Main({ token }) {
           <h2>rechtes frage</h2>
           <br></br>
           <h4>PlatzHalter für Osama</h4>
-          <LyricsBox />
+          <LyricsBox token={token} title={songTitle} artist={songArtist} />
         </div>
       </div>
       <div>
@@ -62,7 +63,8 @@ function Main({ token }) {
             uris={playURIs}
             play={play}
             callback={(data) => {
-              setPlay(data.isPlaying);
+              setTitle(data.track.name);
+              setArtist(data.track.artists);
             }}
           />
         </div>
