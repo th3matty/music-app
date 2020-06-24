@@ -32,7 +32,7 @@ class LyricsBox extends React.Component {
 
   render() {
     return (
-      <div className="lyricsBox">
+      <div>
         <h1 className="lyricsTitle" onClick={this.UpdateState}>
           {this.props.title}
         </h1>

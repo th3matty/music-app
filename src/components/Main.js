@@ -49,10 +49,6 @@ function Main({ token }) {
           </div>
         </div>
         <div className=" w-56 bg-gray-600">
-          {" "}
-          <h2>rechtes frage</h2>
-          <br></br>
-          <h4>PlatzHalter für Osama</h4>
           <LyricsBox token={token} title={songTitle} artist={songArtist} />
         </div>
       </div>
