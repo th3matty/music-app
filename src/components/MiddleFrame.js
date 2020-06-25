@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import TopView from './TopMainView';
 import SpotifyPlayer from 'react-spotify-web-playback'; // https://github.com/gilbarbara/react-spotify-web-playback
+import waait from 'waait'; // https://www.npmjs.com/package/waait
+import PlaylistView from './PlaylistView';
 
-function MiddleFrame({ token, setTitle, setArtist }) {
+function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
 	const [releases, setReleases] = useState([]);
 	const [playURIs, setPlayURIs] = useState([]);
 	const [play, setPlay] = useState(null);
@@ -20,12 +22,19 @@ function MiddleFrame({ token, setTitle, setArtist }) {
 			});
 	}, [token]);
 
+	async function playTrack(uri) {
+		setPlay(false);
+		await waait(100);
+		setPlayURIs(uri);
+		setPlay(true);
+	}
+
 	return (
 		<div className="flex-1 content-area overflow-y-auto bg-colorPallete_Blue h-screen relative">
 			{/* ContentAREA //<-- TOPVIEW-->//*/}
 			<div>
-				<TopView setPlay={setPlay} setPlayURIs={setPlayURIs} releases={releases} />
-				{/* <TopView setPlay={setPlay} setPlayURIs={setPlayURIs} releases={releases} /> */}
+				<TopView playTrack={playTrack} releases={releases} />
+				<PlaylistView token={token} playlistID={playlistID} playTrack={playTrack} />
 			</div>
 			<div className="absolute bottom-0 inset-x-0">
 				<SpotifyPlayer
