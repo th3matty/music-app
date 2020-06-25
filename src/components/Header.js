@@ -12,15 +12,27 @@ function Header({ token }) {
       },
     })
       .then((res) => res.json())
-      .then((profile) => setUserProfile(profile));
-  }, []);
+      .then((profile) => setUserProfile(profile))
+      .then((profile) => {
+        console.log("profile", profile);
+        console.log(profile.images[0].url);
+        setUserProfile(profile);
+      });
+  }, [token]);
 
+  // console.log('userProfile:',userProfile)
   return (
     <div className="w-full">
       <div className="top-bar flex px-4 py-2 justify-end bg-gray_aside">
         <span>{userProfile.display_name}</span>
-        <a href="!#" className=" mt-2">
-          <img src={UserProfileIcon} className="" alt="UserProfileIcon" />
+        <a href="!#" className=" mt-2 ml-2">
+          <img
+            src={
+              userProfile.images ? userProfile.images[0].url : UserProfileIcon
+            }
+            className="w-10 h-10"
+            alt="UserProfileIcon"
+          />
         </a>
       </div>
     </div>
