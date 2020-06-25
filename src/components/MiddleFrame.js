@@ -42,16 +42,25 @@ function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
       );
   }, [token]);
 
+  async function playTrack(uri) {
+    setPlay(false);
+    await waait(100);
+    setPlayURIs(uri);
+    setPlay(true);
+  }
+
   return (
-    <div className="flex-1 content-area overflow-y-auto bg-colorPallete_Blue h-screen relative">
+    <div className="flex-1 overflow-y-auto bg-colorPallete_Blue h-screen relative">
       {/* ContentAREA //<-- TOPVIEW-->//*/}
       <div>
-        <TopView
-          setPlay={setPlay}
-          setPlayURIs={setPlayURIs}
-          releases={releases}
-        />
-        {/* <TopView setPlay={setPlay} setPlayURIs={setPlayURIs} releases={releases} /> */}
+        <TopView playTrack={playTrack} releases={releases} />
+        {playlistID && (
+          <PlaylistView
+            token={token}
+            playlistID={playlistID}
+            playTrack={playTrack}
+          />
+        )}
       </div>
       <div className="absolute bottom-0 inset-x-0">
         <SpotifyPlayer
@@ -67,12 +76,6 @@ function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
       </div>
     </div>
   );
-  async function playTrack(uri) {
-    setPlay(false);
-    await waait(100);
-    setPlayURIs(uri);
-    setPlay(true);
-  }
 }
 
 export default MiddleFrame;

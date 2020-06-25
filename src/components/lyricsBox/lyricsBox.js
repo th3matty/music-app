@@ -48,6 +48,7 @@ class LyricsBox extends React.Component {
             )
               .then((res) => res.json())
               .then((res) => {
+                console.log(res.message.body.lyrics.lyrics_body);
                 this.setState({ lyrics: res.message.body.lyrics.lyrics_body });
               });
           }
@@ -57,7 +58,7 @@ class LyricsBox extends React.Component {
 
   render() {
     return (
-      <div className="w-56 h-screen bg-colorPallete_LightGreen max-h-screen overflow-x-hidden overflow-y-auto">
+      <div className="lyricsDiv w-56 h-screen bg-colorPallete_LightGreen max-h-screen overflow-x-hidden overflow-y-auto">
         <h1
           className="lyricsTitle font-extrabold text-colorPallete_Blue text-lg overflow-x-hidden"
           onClick={this.UpdateState}
@@ -70,7 +71,7 @@ class LyricsBox extends React.Component {
           {this.state.artistName}
         </p>
         <hr></hr>
-        <p className="lyrics text-base text-colorPallete_Blue mt-5 leading-loose">
+        <p className="Helvetica-Neue text-base text-colorPallete_Blue mt-5 leading-loose">
           {this.state.lyrics}
         </p>
       </div>
