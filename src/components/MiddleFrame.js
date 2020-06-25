@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import TopView from './TopMainView';
+import TopView from './TopMainView.js';
+import Header from  './Header.js'
 import SpotifyPlayer from 'react-spotify-web-playback'; // https://github.com/gilbarbara/react-spotify-web-playback
 
 function MiddleFrame({ token, setTitle, setArtist }) {
@@ -22,6 +23,7 @@ function MiddleFrame({ token, setTitle, setArtist }) {
 
 	return (
 		<div className="flex-1 content-area overflow-y-auto bg-colorPallete_Blue h-screen relative">
+			{/* <Header /> */}
 			{/* ContentAREA //<-- TOPVIEW-->//*/}
 			<div>
 				<TopView setPlay={setPlay} setPlayURIs={setPlayURIs} releases={releases} />

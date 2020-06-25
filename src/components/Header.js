@@ -27,7 +27,7 @@ function Header({ token }) {
   // console.log('userProfile:',userProfile)
   return (
     <div className="w-full">
-      <div className="top-bar flex px-4 py-2 justify-end bg-gray_aside">
+      <div className="top-bar flex px-4 py-2 justify-end bg-gray_aside overflow-hidden">
         <span>{userProfile.display_name}</span>
         <a href="!#" className=" mt-2 ml-2">
           <img src={userPic} className="w-10 h-10" alt="UserProfileIcon" />
