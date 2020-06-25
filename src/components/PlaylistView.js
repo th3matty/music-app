@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function PlaylistView({ token, playlistID, playTrack }) {
+function PlaylistView({ token, playlistID, playTrack, setOffset }) {
 	const [playlist, setPlaylist] = useState(null);
 	const [trackCover, setTrackCover] = useState(null);
 
@@ -16,21 +16,26 @@ function PlaylistView({ token, playlistID, playTrack }) {
 				setPlaylist(playlist);
 				setTrackCover(playlist.images[0].url);
 			});
-	}, [playlistID]);
+	}, [playlistID, token]);
 
 	return (
 		<div className="p-4 flex flex-wrap justify-around">
-			<h3 className="text-lg w-full mb-4" onClick={() => playTrack(playlist.uri)}>
-				{playlist && playlist.name}
-			</h3>
+			<h3 className="text-lg w-full mb-4">{playlist && playlist.name}</h3>
 			<div className="">
-				<img className="w-32 h-32" src={trackCover} />
+				<img className="w-32 h-32" src={trackCover} alt="playlist album art" />
 			</div>
 			<div className="pr-4 w-1/2">
 				{playlist &&
 					playlist.tracks.items.map((item, index) => {
 						return (
-							<p className="flex justify-between" key={item.track.id}>
+							<p
+								className="flex justify-between"
+								key={item.track.id}
+								onClick={() => {
+									setOffset(index);
+									playTrack(playlist.uri);
+								}}
+							>
 								<span>
 									{index + 1}. {item.track.name}
 								</span>

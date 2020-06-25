@@ -8,6 +8,7 @@ function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
   const [releases, setReleases] = useState([]);
   const [playURIs, setPlayURIs] = useState([]);
   const [play, setPlay] = useState(null);
+  const [offset, setOffset] = useState(0);
   var uris = [];
   useEffect(() => {
     fetch("https://api.spotify.com/v1/browse/new-releases", {
@@ -59,6 +60,7 @@ function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
             token={token}
             playlistID={playlistID}
             playTrack={playTrack}
+            setOffset={setOffset}
           />
         )}
       </div>
@@ -68,6 +70,7 @@ function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
           token={token}
           uris={playURIs}
           play={play}
+          offset={offset}
           callback={(data) => {
             setTitle(data.track.name);
             setArtist(data.track.artists);
