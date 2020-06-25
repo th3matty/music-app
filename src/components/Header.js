@@ -20,16 +20,7 @@ function Header({ token }) {
 	 
   }, [token]);
 
-  console.log('userProfile:',userProfile)
-
-//   let userBlankPic;
-
-//   if(userProfile.images ){
-// 	 userBlankPic = userProfile.images[0].url
-//   }else{
-// 	userBlankPic = UserProfileIcon
-//   }
-
+ // console.log('userProfile:',userProfile)
   return (
     <div className="w-full">
       <div className="top-bar flex px-4 py-2 justify-end bg-gray_aside">
