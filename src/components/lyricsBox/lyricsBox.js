@@ -12,8 +12,6 @@ class LyricsBox extends React.Component {
       album: "",
       trackName: "",
       artistName: "",
-      inst: "",
-      noLyrcis: "",
     };
   }
 
