@@ -1,30 +1,10 @@
 import React, { Component } from 'react';
+import Playlist from './Playlist';
 import '../assets/aside.css';
 import HomeIcon from '../assets/img/home.svg';
 import SearchIcon from '../assets/img/search.svg';
 
 class Aside extends Component {
-	state = {
-		playlists: [],
-	};
-
-	getPlaylists() {
-		fetch('https://api.spotify.com/v1/me/playlists', {
-			headers: {
-				Authorization: `Bearer ${this.props.token}`,
-			},
-		})
-			.then(res => res.json())
-			.then(playlists => {
-				console.log(playlists.items);
-				this.setState({ playlists: playlists.items });
-			});
-	}
-
-	componentDidMount() {
-		this.getPlaylists();
-	}
-
 	render() {
 		return (
 			<div className="sidebar w-48 bg-gray_aside font-semibold">
@@ -52,17 +32,9 @@ class Aside extends Component {
 							</li>
 						</ul>
 						<hr className="mt-3 mb-3"></hr>
-						<p className="text-colorPallete_MintGreen mb-3 mt-5 text-lg ml-2">Your Playlists</p>
-						<div className="">
-							{this.state.playlists &&
-								this.state.playlists.map(playlist => (
-									<p key={playlist.id} className="text-sm ml-2">
-										{playlist.name}
-									</p>
-								))}
-						</div>
+						<Playlist token={this.props.token} />
 					</div>
-				</div>				
+				</div>
 			</div>
 		);
 	}
