@@ -20,7 +20,7 @@ function Main({ token }) {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res.albums.items);
+        //console.log(res.albums.items);
         setReleases(res.albums.items);
       });
   }, [token]);
@@ -45,12 +45,22 @@ function Main({ token }) {
 
       <div className="w-full fixed bottom-0">
         <SpotifyPlayer
+          styles={{
+            bgColor: "#22577A",
+            color: "#fff",
+            loaderColor: "#fff",
+            sliderColor: "#80ED99",
+            savedColor: "#fff",
+            trackArtistColor: "#ccc",
+            trackNameColor: "#80ED99",
+          }}
           token={token}
           uris={playURIs}
           play={play}
           callback={(data) => {
             setTitle(data.track.name);
             setArtist(data.track.artists);
+            console.log(data);
           }}
         />
       </div>
