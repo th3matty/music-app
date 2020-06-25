@@ -9,12 +9,12 @@ class TopView extends Component {
     return (
       <div
         id="container1"
-        className="flex-no-wrap container mx-auto"
-      >
-        {" "}
+        /* {"-no-wrap "} */
+        className="flex container mx-auto"
+      >        
         <p className="justify-start text-base text-colorPallete_LightGreen">New Releases</p>
-        <div id="container2" className="container overflow-x-auto overflow-y-hidden">
-          <div className="flex ml-10 mr-10">
+        <div id="container2" className="container overflow-x-auto overflow-y-hidden ">
+          <div className="flex ml-1 mr-10">
             {this.props.releases.map((release) => (
               <Album
                 setPlay={this.props.setPlay}

@@ -12,7 +12,6 @@ function Main({ token }) {
 		<div className="text-sm text-gray-400 flex flex-wrap">
 			<Header token={token} />
 			<Aside token={token} />
-
 			<MiddleFrame token={token} setTitle={setTitle} setArtist={setArtist} />
 			<LyricsBox token={token} title={songTitle} artist={songArtist} />
 		</div>

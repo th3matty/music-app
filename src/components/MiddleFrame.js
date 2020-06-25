@@ -25,7 +25,7 @@ function MiddleFrame({ token, setTitle, setArtist }) {
 			{/* ContentAREA //<-- TOPVIEW-->//*/}
 			<div>
 				<TopView setPlay={setPlay} setPlayURIs={setPlayURIs} releases={releases} />
-				<TopView setPlay={setPlay} setPlayURIs={setPlayURIs} releases={releases} />
+				{/* <TopView setPlay={setPlay} setPlayURIs={setPlayURIs} releases={releases} /> */}
 			</div>
 			<div className="absolute bottom-0 inset-x-0">
 				<SpotifyPlayer
