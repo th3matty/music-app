@@ -3,21 +3,20 @@ import React, { useEffect, useState } from 'react';
 function Playlist({ token, setPlaylistID }) {
 	const [playlists, setPlaylists] = useState([]);
 
-	function getPlaylists() {
-		fetch('https://api.spotify.com/v1/me/playlists', {
-			headers: {
-				Authorization: `Bearer ${token}`,
-			},
-		})
-			.then(res => res.json())
-			.then(playlists => {
-				setPlaylists(playlists.items);
-			});
-	}
-
 	useEffect(() => {
+		function getPlaylists() {
+			fetch('https://api.spotify.com/v1/me/playlists', {
+				headers: {
+					Authorization: `Bearer ${token}`,
+				},
+			})
+				.then(res => res.json())
+				.then(playlists => {
+					setPlaylists(playlists.items);
+				});
+		}
 		getPlaylists();
-	}, []);
+	}, [token]);
 
 	return (
 		<div>
