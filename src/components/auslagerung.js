@@ -1,34 +1,61 @@
-// * <div
-// 	   id="albumContainer "
-//       className="m-2 group card card-body flipcard"
-//       onClick={async () => {
-//         setPlay(false);
-//         await waait(100);
-//         setPlayURIs(release.uri);
-//         setPlay(true);
-//       }}
-//     >
-//       <div className="max-w-sm w-full lg:max-w-full lg:flex inner">
-//         <div className="card-front h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden front">
-//           <img
-//             src={release.images[1].url}
-//             alt={release.name}
-//             className="w-full"
-//           />
-//         </div>
-//         <div className=" card-back back border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-//           <div className="px-6 py-4">
-//             <p className="font-bold text-gray-800 text-sm hover:bg-grey-600">
-//               {release.name.length > 8
-//                 ? release.name.substring(0, 8) + "..."
-//                 : release.name}
-//             </p>
-//             <p className="text-sm text-gray-600 mt-1">
-//               {release.artists[0].name.length > 8
-//                 ? release.artists[0].name.substring(0, 8) + "..."
-//                 : release.artists[0].name}
-//             </p>
-//           </div>
-//         </div>
+// import React, { useState, useEffect } from "react";
+// import UserProfileIcon from "../assets/img/userProfile.svg";
+// import Logout from '../assets/img/logout.svg';
+// import waait from 'waait';
+
+// function Header({ token }) {
+// 	const [userProfile, setUserProfile] = useState({});
+// 	const [userPic, setUserPic] = useState(UserProfileIcon);
+
+// 	useEffect(() => {
+// 		async function getProfile() {
+// 			const response = await fetch('https://api.spotify.com/v1/me', {
+// 				headers: {
+// 					Authorization: `Bearer ${token}`,
+// 				},
+// 			});
+
+// 			const profile = await response.json();
+// 			console.log('profile', profile);
+// 			setUserProfile(profile);
+//       await waait(100);
+//       if (profile.images.length) {
+// 				setUserPic(profile.images[0].url);
+// 			}
+// 		}
+// 		getProfile();
+// 	}, [token]);
+
+//   // console.log('userProfile:',userProfile)
+
+//   //fixed top-0 inset-x-0
+//   return (
+//     <div className="w-full ">
+//       <div className="flex items-center justify-end bg-gray_aside text-white text-sm overflow-hidden fixed top-0 inset-x-0 ">
+//         <span>{userProfile.display_name}</span>
+//         <a href="!#" className=" mt-2 ml-2">
+//           <img src={userPic} className="w-10 h-10 rounded-full mb-2" alt="UserProfileIcon" />
+//         </a>
+//         <a href="!#" className=" mt-2 ml-2">
+//           <img src={Logout} className="mr-2 ml-2 mb-2 justify-end" alt="LogoutIcon" />
+//         </a>
 //       </div>
-//     </div> 
+
+//     </div>
+//   );
+// }
+
+// export default Header;
+
+// Lyrics:
+
+// {
+//   /* <h1
+//             onClick={this.UpdateState}
+//           >
+//             {this.state.trackName}
+//           </h1> */
+// }
+// {
+//   /* <h3 className="font-bold"> {this.state.album}</h3> */
+// }

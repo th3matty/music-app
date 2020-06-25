@@ -8,7 +8,7 @@ function Album({ release, playTrack }) {
 			className="flip-card m-2 group card card-body flipcard"
 			onClick={() => playTrack(release.uri)}
 		>
-			<div className="inner max-w-sm w-full lg:max-w-full lg:flex">
+			<div className="inner max-w-sm w-full lg:max-w-full lg:flex ">
 				<div className="front h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t-lg lg:rounded-t-lg lg:rounded-l text-center overflow-hidden ">
 					<img src={release.images[1].url} alt={release.name} className="w-full" />
 				</div>

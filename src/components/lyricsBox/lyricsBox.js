@@ -1,7 +1,12 @@
 import React from "react";
 import "./LyricsBox.css";
+import "simplebar/dist/simplebar.min.css";
+import SimpleBar from "simplebar-react";
 
 class LyricsBox extends React.Component {
+  // In dieser Component rufen wir die Lyrics ab!
+  // Positonierung rechts am Bildschirm
+
   constructor(props) {
     super(props);
     this.state = {
@@ -57,23 +62,31 @@ class LyricsBox extends React.Component {
 
   render() {
     return (
-      <div className="w-56 bg-colorPallete_LightGreen max-h-screen overflow-x-hidden overflow-y-auto">
-        <h1
-          className="lyricsTitle font-extrabold text-colorPallete_Blue text-lg overflow-x-hidden"
-          onClick={this.UpdateState}
-        >
-          {this.state.trackName}
-        </h1>
-        {/* <h3 className="font-bold"> {this.state.album}</h3> */}
-        <p className="italic text-gray_aside mt-20">Album...<span className="font-extrabold text-colorPallete_Blue text-lg overflow-x-hidden">{this.state.album}</span> from... </p>
-        <p className="font-bold text-base text-colorPallete_Blue mb-5">
-          {this.state.artistName}
-        </p>
-        <h3>Track:</h3> <span className="font-bold text-colorPallete_Blue text-lg">{this.state.trackName}</span>
-        <hr></hr>
-        <p className="lyrics text-base text-colorPallete_Blue mt-5 leading-loose">
-          {this.state.lyrics}
-        </p>
+      <div className=" w-56 max-w-sm h-screen shadow-lg bg-colorPallete_LightGreen  overflow-x-hidden">
+        <div className="px-6 py-4">          
+          <p className="italic text-gray_aside mt-20">
+          <hr></hr>
+            Album...
+            <span className="font-extrabold text-colorPallete_Blue text-lg ">
+              {this.state.album}
+            </span>{" "}
+            from...{" "}
+          </p>
+          <p className="font-bold text-base text-colorPallete_Blue mb-5">
+            {this.state.artistName}
+          </p>
+          <h3>Track:</h3>{" "}
+          <span className="font-bold text-colorPallete_Blue text-lg">
+            {this.state.trackName}
+          </span>
+          <hr className="mt-2"></hr>
+          <SimpleBar style={{ maxHeight: 400}}>
+          <p className="text-base text-colorPallete_Blue text-align-justify mt-5 overflow-auto tracking-wider">
+            {this.state.lyrics}
+          </p>
+          </SimpleBar>
+        </div>
+        
       </div>
     );
   }

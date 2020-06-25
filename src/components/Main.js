@@ -3,6 +3,7 @@ import Aside from './Aside.js';
 import Header from './Header';
 import LyricsBox from './lyricsBox/lyricsBox';
 import MiddleFrame from './MiddleFrame.js';
+import Footer from './Footer.js';
 
 function Main({ token }) {
 	const [songTitle, setTitle] = useState('');
@@ -20,6 +21,7 @@ function Main({ token }) {
 				playlistID={playlistID}
 			/>
 			<LyricsBox token={token} title={songTitle} artist={songArtist} />
+			<Footer />
 		</div>
 	);
 }
