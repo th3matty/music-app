@@ -4,6 +4,7 @@ import Aside from './Aside.js';
 import Header from './Header';
 import TopView from './TopMainView.js';
 import LyricsBox from './lyricsBox/lyricsBox';
+import MiddleFrame from './MiddleFrame.js';
 
 function Main({ token }) {
 	const [releases, setReleases] = useState([]);
@@ -30,26 +31,8 @@ function Main({ token }) {
 			<Header token={token} />
 			<Aside token={token} />
 
-			<div className="flex-1 content-area overflow-y-auto bg-colorPallete_Blue h-screen">
-				<div className="TopView">
-					{/* ContentAREA //<-- TOPVIEW-->//*/}
-					<TopView setPlay={setPlay} setPlayURIs={setPlayURIs} releases={releases} />
-				</div>
-			</div>
-
+			<MiddleFrame token={token} setTitle={setTitle} setArtist={setArtist} />
 			<LyricsBox token={token} title={songTitle} artist={songArtist} />
-
-			<div className="w-full fixed bottom-0">
-				<SpotifyPlayer
-					token={token}
-					uris={playURIs}
-					play={play}
-					callback={data => {
-						setTitle(data.track.name);
-						setArtist(data.track.artists);
-					}}
-				/>
-			</div>
 		</div>
 	);
 }

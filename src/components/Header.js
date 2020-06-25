@@ -16,13 +16,11 @@ function Header({ token }) {
 	}, []);
 
 	return (
-		<div className="w-full">
-			<div className="top-bar flex px-4 py-2 justify-end bg-gray_aside">
-				<span>{userProfile.display_name}</span>
-				<a href="!#" className=" mt-2">
-					<img src={UserProfileIcon} className="" alt="UserProfileIcon" />
-				</a>
-			</div>
+		<div className="w-full top-bar flex px-4 py-2 justify-end bg-gray_aside">
+			<span>{userProfile.display_name}</span>
+			<a href="!#" className=" mt-2">
+				<img src={UserProfileIcon} className="" alt="UserProfileIcon" />
+			</a>
 		</div>
 	);
 }
