@@ -57,7 +57,7 @@ class LyricsBox extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="w-56 bg-colorPallete_LightGreen">
         <h1
           className="lyricsTitle font-extrabold text-colorPallete_Blue text-lg"
           onClick={this.UpdateState}
@@ -70,7 +70,7 @@ class LyricsBox extends React.Component {
           {this.state.artistName}
         </p>
         <hr></hr>
-        <p className="lyrics text-base text-colorPallete_Blue mt-5">
+        <p className="lyrics text-base text-colorPallete_Blue mt-5 leading-loose">
           {this.state.lyrics}
         </p>
       </div>
