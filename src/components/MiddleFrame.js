@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import TopView from './TopMainView';
+import TopView from './TopMainView.js';
 import SpotifyPlayer from 'react-spotify-web-playback'; // https://github.com/gilbarbara/react-spotify-web-playback
 import waait from 'waait'; // https://www.npmjs.com/package/waait
 import PlaylistView from './PlaylistView';
@@ -30,7 +30,8 @@ function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
 	}
 
 	return (
-		<div className="flex-1 content-area overflow-y-auto bg-colorPallete_Blue h-screen relative">
+		<div className="flex-1 overflow-y-auto bg-colorPallete_Blue h-screen relative">
+		
 			{/* ContentAREA //<-- TOPVIEW-->//*/}
 			<div>
 				<TopView playTrack={playTrack} releases={releases} />
