@@ -34,7 +34,7 @@ function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
 			{/* ContentAREA //<-- TOPVIEW-->//*/}
 			<div>
 				<TopView playTrack={playTrack} releases={releases} />
-				<PlaylistView token={token} playlistID={playlistID} playTrack={playTrack} />
+				{playlistID && <PlaylistView token={token} playlistID={playlistID} playTrack={playTrack} />}
 			</div>
 			<div className="absolute bottom-0 inset-x-0">
 				<SpotifyPlayer
