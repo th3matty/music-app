@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
-import TopView from "./TopMainView";
+import TopView from "./TopMainView.js";
 import SpotifyPlayer from "react-spotify-web-playback"; // https://github.com/gilbarbara/react-spotify-web-playback
+import waait from "waait"; // https://www.npmjs.com/package/waait
+import PlaylistView from "./PlaylistView";
 
-function MiddleFrame({ token, setTitle, setArtist }) {
+function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
   const [releases, setReleases] = useState([]);
   const [playURIs, setPlayURIs] = useState([]);
   const [play, setPlay] = useState(null);
   var uris = [];
-
   useEffect(() => {
     fetch("https://api.spotify.com/v1/browse/new-releases", {
       headers: {
@@ -66,6 +67,12 @@ function MiddleFrame({ token, setTitle, setArtist }) {
       </div>
     </div>
   );
+  async function playTrack(uri) {
+    setPlay(false);
+    await waait(100);
+    setPlayURIs(uri);
+    setPlay(true);
+  }
 }
 
 export default MiddleFrame;

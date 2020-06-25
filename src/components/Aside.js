@@ -32,7 +32,7 @@ class Aside extends Component {
 							</li>
 						</ul>
 						<hr className="mt-3 mb-3"></hr>
-						<Playlist token={this.props.token} />
+						<Playlist token={this.props.token} setPlaylistID={this.props.setPlaylistID} />
 					</div>
 				</div>
 			</div>

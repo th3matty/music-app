@@ -57,9 +57,9 @@ class LyricsBox extends React.Component {
 
   render() {
     return (
-      <div className="w-56 bg-colorPallete_LightGreen max-h-screen overflow-x-hidden overflow-y-hidden">
+      <div className="w-56 h-screen bg-colorPallete_LightGreen max-h-screen overflow-x-hidden overflow-y-auto">
         <h1
-          className="lyricsTitle font-extrabold text-colorPallete_Blue text-lg overflow-x-hidden overflow-y-hidden"
+          className="lyricsTitle font-extrabold text-colorPallete_Blue text-lg overflow-x-hidden"
           onClick={this.UpdateState}
         >
           {this.state.trackName}
