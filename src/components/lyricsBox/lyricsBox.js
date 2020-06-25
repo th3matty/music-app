@@ -38,20 +38,23 @@ class LyricsBox extends React.Component {
 		}
 	}
 
-  render() {
-    return (
-      <div>
-        <h1 className="lyricsTitle font-extrabold text-colorPallete_Blue text-lg" onClick={this.UpdateState}>
-          {this.state.trackName}
-        </h1>
-        {/* <h3 className="font-bold"> {this.state.album}</h3> */}
-        <p className="italic text-gray_aside">Album from...  </p>
-        <p className="font-bold text-base text-colorPallete_Blue mb-5">{this.state.artistName}</p>
-        <hr></hr>
-        <p className="lyrics text-base text-colorPallete_Blue mt-5">{this.state.lyrics}</p>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className="w-56 bg-colorPallete_LightGreen">
+				<h1
+					className="lyricsTitle font-extrabold text-colorPallete_Blue text-lg"
+					onClick={this.UpdateState}
+				>
+					{this.state.trackName}
+				</h1>
+				{/* <h3 className="font-bold"> {this.state.album}</h3> */}
+				<p className="italic text-gray_aside">Album from... </p>
+				<p className="font-bold text-base text-colorPallete_Blue mb-5">{this.state.artistName}</p>
+				<hr></hr>
+				<p className="lyrics text-base text-colorPallete_Blue mt-5">{this.state.lyrics}</p>
+			</div>
+		);
+	}
 }
 
 export default LyricsBox;

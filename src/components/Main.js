@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SpotifyPlayer from 'react-spotify-web-playback'; // https://github.com/gilbarbara/react-spotify-web-playback
 import Aside from './Aside.js';
-import UserProfileIcon from '../assets/img/userProfile.svg';
+import Header from './Header';
 import TopView from './TopMainView.js';
 import LyricsBox from './lyricsBox/lyricsBox';
 
@@ -27,22 +27,18 @@ function Main({ token }) {
 
 	return (
 		<div className="text-sm text-gray-400 flex flex-wrap">
+			<Header token={token} />
 			<Aside token={token} />
 
 			<div className="flex-1 content-area overflow-y-auto bg-colorPallete_Blue h-screen">
-				<div className="top-bar flex px-4 py-2 justify-end bg-gray_aside">
-					<a href="!#" className=" mt-2">
-						<img src={UserProfileIcon} className="" alt="UserProfileIcon" />
-					</a>
-				</div>
 				<div className="TopView">
 					{/* ContentAREA //<-- TOPVIEW-->//*/}
 					<TopView setPlay={setPlay} setPlayURIs={setPlayURIs} releases={releases} />
 				</div>
 			</div>
-			<div className=" w-56 bg-colorPallete_LightGreen">
+
 			<LyricsBox token={token} title={songTitle} artist={songArtist} />
-			</div>
+
 			<div className="w-full fixed bottom-0">
 				<SpotifyPlayer
 					token={token}
