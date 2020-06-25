@@ -3,6 +3,7 @@ import Album from './Album';
 import '../assets/main.css';
 
 class TopView extends Component {
+
 	render() {
 		return (
 			<div
@@ -22,4 +23,5 @@ class TopView extends Component {
 		);
 	}
 }
+
 export default TopView;
