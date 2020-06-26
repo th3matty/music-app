@@ -23,7 +23,7 @@ function Header({ token }) {
 				setUserPic(profile.images[0].url);
 			}
 		}
-		getProfile();
+		//getProfile();
 	}, [token]);
 
 	// console.log('userProfile:',userProfile)

@@ -36,7 +36,7 @@ class Aside extends Component {
               </li>
             </ul>
             <hr className="mt-3 mb-3"></hr>
-			<SimpleBar  className="" style={{ maxHeight: 500 }}>
+			<SimpleBar  className="area" style={{ maxHeight: 500 }}>
               <Playlist
                 token={this.props.token}
                 setPlaylistID={this.props.setPlaylistID}
