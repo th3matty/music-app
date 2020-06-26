@@ -24,7 +24,7 @@ function App() {
 		let scopes = encodeURIComponent(
 			'streaming user-read-email user-read-private user-read-playback-state user-modify-playback-state playlist-read-private'
 		);
-		window.location = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=code&scope=${scopes}&redirect_uri=${redirectURI}`;
+		window.location = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=code&scope=${scopes}&redirect_uri=${redirectURI}&show_dialog=true`;
 	}
 
 	function fetchToken(code) {
