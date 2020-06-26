@@ -26,7 +26,7 @@ function Playlist({ token, setPlaylistID }) {
 					<p key={playlist.id} className="text-sm ml-2" onClick={() => setPlaylistID(playlist.id)}>
 						{playlist.name}
 					</p>
-				))}
+				))}				
 			</div>
 		</div>
 	);
