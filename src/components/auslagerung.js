@@ -59,3 +59,30 @@
 // {
 //   /* <h3 className="font-bold"> {this.state.album}</h3> */
 // }
+
+
+// if (profileImage){
+//     setUserPic(profile.images[0].url)
+// }}
+// let lengthIsthere = () => profile.images.length;
+//       let profileImage = profile.some(lengthIsthere);
+//       let getUserPic = () => {
+//         if (profileImage) {
+//           setUserPic(profile.images[0].url);
+//         }
+// 	  };
+// 	  getUserPic();
+
+
+// let userPicPath = profile.images[0].url;
+// 	  console.log('Unser Profile.Images:',profile.images[0])
+//       console.log("Type:", typeof userPicPath);
+//       console.log("userPic", userPicPath);
+//       let userPic = userPicPath;
+
+//       let catchedProfilePic = userPic.hasOwnProperty('images');
+// 	  console.log("it worked, i got the boolean", catchedProfilePic);
+	  
+// 	  if(catchedProfilePic ===true){
+// 		setUserPic(profile.images[0].url)
+// 	  }
