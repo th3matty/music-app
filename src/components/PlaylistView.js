@@ -20,9 +20,11 @@ function PlaylistView({ token, playlistID, playTrack, setOffset }) {
 
 	return (
 		<div className="p-4 flex flex-wrap justify-around">
-			<h3 className="text-lg w-full mb-4">{playlist && playlist.name}</h3>
+			<h3 className="w-full text-xl mb-4 text-colorPallete_LightGreen">
+				{playlist && playlist.name}
+			</h3>
 			<div className="">
-				<img className="w-32 h-32" src={trackCover} alt="playlist album art" />
+				<img className="w-48 h-48" src={trackCover} alt="playlist album art" />
 			</div>
 			<div className="pr-4 w-1/2">
 				{playlist &&
