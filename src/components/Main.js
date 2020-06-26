@@ -9,16 +9,20 @@ function Main({ token }) {
 	const [songTitle, setTitle] = useState('');
 	const [songArtist, setArtist] = useState('');
 	const [playlistID, setPlaylistID] = useState('');
+	const [albumID, setAlbumID] = useState('');
 
 	return (
 		<div className="flex flex-wrap">
 			<Header token={token} />
-			<Aside token={token} setPlaylistID={setPlaylistID} />
+			<Aside token={token} setPlaylistID={setPlaylistID} setAlbumID={setAlbumID} />
 			<MiddleFrame
 				token={token}
 				setTitle={setTitle}
 				setArtist={setArtist}
 				playlistID={playlistID}
+				setPlaylistID={setPlaylistID}
+				setAlbumID={setAlbumID}
+				albumID={albumID}
 			/>
 			<LyricsBox token={token} title={songTitle} artist={songArtist} />
 			<Footer />

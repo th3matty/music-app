@@ -29,13 +29,13 @@ function PlaylistView({ token, playlistID, playTrack, setOffset }) {
 				<img className="w-48 h-48" src={trackCover} alt="playlist album art" />
 			</div>
 
-			<SimpleBar style={{ maxHeight: 250, width: '50%' }}>
+			<SimpleBar style={{ maxHeight: 250, width: '60%', paddingRight: 10 }}>
 				<div>
 					{playlist &&
 						playlist.tracks.items.map((item, index) => {
 							return (
 								<p
-									className="flex justify-between mb-1 cursor-pointer hover:border rounded"
+									className="flex justify-between cursor-pointer hover:border rounded"
 									key={item.track.id}
 									onClick={() => {
 										setOffset(index);
