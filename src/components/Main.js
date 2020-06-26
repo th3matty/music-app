@@ -10,7 +10,7 @@ function Main({ token }) {
 	const [playlistID, setPlaylistID] = useState('');
 
 	return (
-		<div className="text-sm text-gray-400 flex flex-wrap">
+		<div className="flex flex-wrap">
 			<Header token={token} />
 			<Aside token={token} setPlaylistID={setPlaylistID} />
 			<MiddleFrame

@@ -7,7 +7,7 @@ import SearchIcon from '../assets/img/search.svg';
 class Aside extends Component {
 	render() {
 		return (
-			<div className="sidebar w-48 bg-gray_aside font-semibold">
+			<div className="sidebar w-48 bg-gray_aside font-semibold text-sm text-gray-400">
 				<div className="py-6">
 					here comes our Logo
 					<div className="">
