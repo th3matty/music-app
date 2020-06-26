@@ -5891,10 +5891,6 @@ video {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
-.rounded-r-big {
-  border-top-right-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
-}
 
 .rounded-b-lg {
   border-bottom-right-radius: 0.5rem;
