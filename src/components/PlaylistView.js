@@ -23,7 +23,7 @@ function PlaylistView({ token, playlistID, playTrack, setOffset }) {
 			<h3 className="w-full text-xl mb-4 text-colorPallete_LightGreen">
 				{playlist && playlist.name}
 			</h3>
-			<div className="">
+			<div className="w-1/2">
 				<img className="w-48 h-48" src={trackCover} alt="playlist album art" />
 			</div>
 			<div className="w-1/2">
@@ -31,7 +31,7 @@ function PlaylistView({ token, playlistID, playTrack, setOffset }) {
 					playlist.tracks.items.map((item, index) => {
 						return (
 							<p
-								className="flex justify-between"
+								className="flex justify-between mb-1"
 								key={item.track.id}
 								onClick={() => {
 									setOffset(index);
