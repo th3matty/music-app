@@ -24,9 +24,9 @@ function App() {
 
   function getAccessToken() {
     let scopes = encodeURIComponent(
-      "streaming user-follow-read user-top-read user-read-email user-read-private user-read-playback-state user-modify-playback-state playlist-read-private user-read-recently-played user-library-modify ugc-image-upload user-read-recently-played user-top-read user-read-playback-position user-read-playback-state user-read-currently-playing app-remote-control "
+      "streaming user-read-email user-read-private user-read-playback-state user-modify-playback-state playlist-read-private"
     );
-    window.location = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=code&scope=${scopes}&redirect_uri=${redirectURI}`;
+    window.location = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=code&scope=${scopes}&redirect_uri=${redirectURI}&show_dialog=true`;
   }
 
   function fetchToken(code) {

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import SimpleBar from 'simplebar-react';
+import 'simplebar/dist/simplebar.min.css';
 
 function PlaylistView({ token, playlistID, playTrack, setOffset }) {
 	const [playlist, setPlaylist] = useState(null);
@@ -19,31 +21,37 @@ function PlaylistView({ token, playlistID, playTrack, setOffset }) {
 	}, [playlistID, token]);
 
 	return (
-		<div className="p-4 flex flex-wrap justify-around">
-			<h3 className="text-lg w-full mb-4">{playlist && playlist.name}</h3>
-			<div className="">
-				<img className="w-32 h-32" src={trackCover} alt="playlist album art" />
+		<div className="flex flex-wrap justify-around mt-4">
+			<h3 className="w-full text-xl mb-4 text-colorPallete_LightGreen">
+				{playlist && playlist.name}
+			</h3>
+			<div>
+				<img className="w-48 h-48" src={trackCover} alt="playlist album art" />
 			</div>
-			<div className="pr-4 w-1/2">
-				{playlist &&
-					playlist.tracks.items.map((item, index) => {
-						return (
-							<p
-								className="flex justify-between"
-								key={item.track.id}
-								onClick={() => {
-									setOffset(index);
-									playTrack(playlist.uri);
-								}}
-							>
-								<span>
-									{index + 1}. {item.track.name}
-								</span>
-								<span>{item.track.artists[0].name}</span>
-							</p>
-						);
-					})}
-			</div>
+
+			<SimpleBar style={{ maxHeight: 250, width: '50%' }}>
+				<div>
+					{playlist &&
+						playlist.tracks.items.map((item, index) => {
+							return (
+								<p
+									className="flex justify-between mb-1 cursor-pointer hover:border rounded"
+									key={item.track.id}
+									onClick={() => {
+										setOffset(index);
+										playTrack(playlist.uri);
+										setTrackCover(item.track.album.images[1].url);
+									}}
+								>
+									<span>
+										{index + 1}. {item.track.name}
+									</span>
+									<span className="text-green-100">{item.track.artists[0].name}</span>
+								</p>
+							);
+						})}
+				</div>
+			</SimpleBar>
 		</div>
 	);
 }

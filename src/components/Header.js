@@ -19,8 +19,10 @@ function Header({ token }) {
       console.log("profile", profile);
       setUserProfile(profile);
       await waait(300);
-      if (profile.images.length) {
-        setUserPic(profile.images[0].url);
+      if (profile.images) {
+        if (profile.images.length) {
+          setUserPic(profile.images[0].url);
+        }
       }
     }
     getProfile();
@@ -31,7 +33,7 @@ function Header({ token }) {
   return (
     <div className="w-56 absolute top-0 right-0 bg-colorPallete_Blue rounded-full py-0.5 px-8 flex items-center">
       <div className="flex-1 px-4 mt-1 py-2">
-        <span className="text-colorPallete_LightGreen text-sm ">
+        <span className="text-colorPallete_LightGreen text-lg ">
           {userProfile.display_name}
         </span>
         <a href="!#" className="  ">
@@ -43,7 +45,7 @@ function Header({ token }) {
         </a>
       </div>
       <div className="">
-        <a href="!#" className="">
+        <a href="/">
           <img src={Logout} className="mt-1 ml-1" alt="LogoutIcon" />
         </a>
       </div>

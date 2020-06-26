@@ -20,29 +20,7 @@ function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
       .then((res) => {
         console.log(res.albums.items);
         setReleases(res.albums.items);
-      })
-      .then(
-        fetch("https://api.spotify.com/v1/me/player/recently-played", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-          .then((res) => res.json())
-          .then((res) => {
-            for (let i = 0; i < res.items.length; i++) {
-              console.log(res.items[i].track.uri);
-
-              setPlayURIs(res.items[i].track.uri);
-            }
-
-            console.log("die uris " + playURIs);
-
-            //{
-            // console.log("last played " + lastPlayed.track);
-            //
-            // }
-          })
-      );
+      });
   }, [token]);
 
   async function playTrack(uri) {
@@ -53,7 +31,7 @@ function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
   }
 
   return (
-    <div className="flex-1 overflow-y-auto bg-colorPallete_Blue h-screen relative">
+    <div className="flex-1 overflow-y-auto bg-colorPallete_Blue h-screen relative p-8">
       {/* ContentAREA //<-- TOPVIEW-->//*/}
       <div>
         <TopView playTrack={playTrack} releases={releases} />
@@ -68,7 +46,6 @@ function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
       </div>
       <div className="absolute bottom-0 inset-x-0">
         <SpotifyPlayer
-          showSaveIcon={true}
           token={token}
           uris={playURIs}
           play={play}
@@ -76,6 +53,15 @@ function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
           callback={(data) => {
             setTitle(data.track.name);
             setArtist(data.track.artists);
+          }}
+          styles={{
+            bgColor: "#22577A",
+            color: "#fff",
+            loaderColor: "#fff",
+            sliderColor: "#1cb954",
+            savedColor: "#fff",
+            trackArtistColor: "#ccc",
+            trackNameColor: "#fff",
           }}
         />
       </div>

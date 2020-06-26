@@ -1,6 +1,5 @@
 .flip-card {
 	background-color: transparent;
-	width: 300px;
 	perspective: 1000px;
 }
 .flip-card .inner {
@@ -16,17 +15,13 @@
 	height: 100%;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
 }
 
 .flip-card .inner .front {
 	background-color: rgb(252, 252, 252);
 }
 /* //<-- Change here background backCard-->// */
-.flip-card .inner .back {
+.flip-card .back {
 	transform: rotateY(180deg);
 }
 .flip-card:hover .inner {
