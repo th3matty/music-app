@@ -2,6 +2,7 @@ import React from "react";
 import "./LyricsBox.css";
 import "simplebar/dist/simplebar.min.css";
 import SimpleBar from "simplebar-react";
+import Header from '../Header'
 
 class LyricsBox extends React.Component {
   // In dieser Component rufen wir die Lyrics ab!
@@ -63,6 +64,7 @@ class LyricsBox extends React.Component {
   render() {
     return (
       <div className=" w-56 max-w-sm h-screen shadow-lg bg-colorPallete_LightGreen  overflow-x-hidden">
+      <Header />
         <div className="px-6 py-4">          
           <p className="italic text-gray_aside mt-20">
           <hr></hr>
