@@ -9,7 +9,7 @@ class TopView extends Component {
 	render() {
 		return (
 			<div>
-				<h3 className="text-2xl mt-6 ml-6 text-colorPallete_LightGreen">New Releases</h3>
+				<h3 className="text-2xl text-colorPallete_LightGreen">New Releases</h3>
 
 				<SimpleBar style={{ maxHeight: 1000, maxWidth: 1500 }}>
 					<div className="flex p-8">

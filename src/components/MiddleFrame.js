@@ -31,7 +31,7 @@ function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
 	}
 
 	return (
-		<div className="flex-1 overflow-y-auto bg-colorPallete_Blue h-screen relative">
+		<div className="flex-1 overflow-y-auto bg-colorPallete_Blue h-screen relative p-8">
 			{/* ContentAREA //<-- TOPVIEW-->//*/}
 			<div>
 				<TopView playTrack={playTrack} releases={releases} />
