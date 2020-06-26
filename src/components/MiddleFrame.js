@@ -9,7 +9,7 @@ function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
   const [playURIs, setPlayURIs] = useState([]);
   const [play, setPlay] = useState(null);
   const [offset, setOffset] = useState(0);
-  var uris = [];
+
   useEffect(() => {
     fetch("https://api.spotify.com/v1/browse/new-releases", {
       headers: {
@@ -26,15 +26,17 @@ function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-          method: "GET",
         })
           .then((res) => res.json())
           .then((res) => {
             for (let i = 0; i < res.items.length; i++) {
-              uris.push(res.items[i].track.uri);
-              setPlayURIs(uris);
-              console.log("die uris " + playURIs);
+              console.log(res.items[i].track.uri);
+
+              setPlayURIs(res.items[i].track.uri);
             }
+
+            console.log("die uris " + playURIs);
+
             //{
             // console.log("last played " + lastPlayed.track);
             //

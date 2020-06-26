@@ -1,11 +1,4 @@
-.lyricsBox {
-    color: black;
-}
-
-.lyrics {
-    text-align: center;
-}
-
-.lyricsDiv {
-    width: 50vw
+#lyricsDiv {
+    width: 12%;
+    border-radius: 5px;
 }

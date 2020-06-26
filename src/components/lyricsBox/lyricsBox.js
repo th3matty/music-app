@@ -2,6 +2,7 @@ import React from "react";
 import "./LyricsBox.css";
 import "simplebar/dist/simplebar.min.css";
 import SimpleBar from "simplebar-react";
+import PopUp from "./LyricsPopUp";
 
 class LyricsBox extends React.Component {
   // In dieser Component rufen wir die Lyrics ab!
@@ -53,38 +54,49 @@ class LyricsBox extends React.Component {
             )
               .then((res) => res.json())
               .then((res) => {
-                console.log(res.message.body.lyrics.lyrics_body);
                 this.setState({ lyrics: res.message.body.lyrics.lyrics_body });
+                /* var inLineLyrics = res.message.body.lyrics.lyrics_body.replace(
+                  "\n",
+                  " <pre></pre>"
+                );
+                console.log(inLineLyrics);
+                this.setState({ lyrics: inLineLyrics }); */
               });
           }
+        })
+        .catch((err) => {
+          console.log("error" + err);
         });
     }
   }
 
   render() {
     return (
-      <div className=" w-56 max-w-sm h-screen shadow-lg bg-colorPallete_LightGreen  overflow-x-hidden">
+      <div
+        className="lyricsDiv w-56 max-w-sm h-screen shadow-lg bg-colorPallete_LightGreen  overflow-x-hidden rounded"
+        onClick={this.props.toggel}
+      >
         <div className="px-6 py-4">
           <p className="italic text-gray_aside mt-20">
             <hr></hr>
             Album...
             <span className="font-extrabold text-colorPallete_Blue text-lg ">
               {this.state.album}
-            </span>{" "}
-            from...{" "}
+            </span>
+            from...
           </p>
           <p className="font-bold text-base text-colorPallete_Blue mb-5">
             {this.state.artistName}
           </p>
-          <h3>Track:</h3>{" "}
+          <h3>Track:</h3>
           <span className="font-bold text-colorPallete_Blue text-lg">
             {this.state.trackName}
           </span>
           <hr className="mt-2"></hr>
           <SimpleBar style={{ maxHeight: 400 }}>
-            <p className="text-base text-colorPallete_Blue text-align-justify mt-5 overflow-auto tracking-wider">
+            <div className="text-base text-colorPallete_Blue text-align-justify mt-5 overflow-auto tracking-wider font-bold text-colorPallete_Blue content-center">
               {this.state.lyrics}
-            </p>
+            </div>
           </SimpleBar>
         </div>
       </div>

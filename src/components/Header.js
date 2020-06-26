@@ -31,7 +31,9 @@ function Header({ token }) {
   return (
     <div className="w-56 absolute top-0 right-0 bg-colorPallete_Blue rounded-full py-0.5 px-8 flex items-center">
       <div className="flex-1 px-4 mt-1 py-2">
-        <span className="text-colorPallete_LightGreen text-lg ">{userProfile.display_name}</span>
+        <span className="text-colorPallete_LightGreen text-sm ">
+          {userProfile.display_name}
+        </span>
         <a href="!#" className="  ">
           <img
             src={userPic}
@@ -41,7 +43,7 @@ function Header({ token }) {
         </a>
       </div>
       <div className="">
-      <a href="!#" className="">
+        <a href="!#" className="">
           <img src={Logout} className="mt-1 ml-1" alt="LogoutIcon" />
         </a>
       </div>
