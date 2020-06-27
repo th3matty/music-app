@@ -19,8 +19,12 @@ class Aside extends Component {
 					<div className="">
 						<ul className="right">
 							<hr className="mt-3 mb-3"></hr>
-							<li className="border-l-4 border-colorPallete_Blue">
-								<a href="#!" className="flex items-center mx-4 mt-4">
+							
+							{/* Ich habe hier mal das blaue "border-element" entnommen, das gleiche auch in der Search bar. 
+							Aufgrund des <a>-Tags und in der Searchbar wegen dem Button. War vom Styling her weird! */}
+
+							{/* <li className="border-l-4 border-colorPallete_Blue"> */}
+								<a href="#!" className="flex items-center mx-5 mt-4">
 									<img src={HomeIcon} className="mr-2" alt="HomeIcon" />
 									<button id="homeBtn" className=" ml-2">
 										<span className="text-colorPallete_LightGreen text-lg hover:font-bold">
@@ -28,7 +32,7 @@ class Aside extends Component {
 										</span>
 									</button>
 								</a>
-							</li>
+							{/* </li> */}
 							<SearchBar token={this.props.token} />
 						</ul>
 						<hr className="mt-3 mb-3"></hr>

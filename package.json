@@ -9,9 +9,12 @@
     "genius-lyrics-api": "^3.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-modal": "^3.11.2",
+    "react-popup": "^0.10.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-spotify-web-playback": "^0.6.0",
+    "reactjs-popup": "^1.5.0",
     "simplebar-react": "^2.2.1",
     "waait": "^1.0.5"
   },
