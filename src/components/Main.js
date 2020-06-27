@@ -14,7 +14,7 @@ function Main({ token }) {
 	return (
 		<div className="flex flex-wrap">
 			<Header token={token} />
-			<Aside token={token} setPlaylistID={setPlaylistID} setAlbumID={setAlbumID} />
+			<Aside token={token} setPlaylistID={setPlaylistID} setAlbumID={setAlbumID} />			
 			<MiddleFrame
 				token={token}
 				setTitle={setTitle}
@@ -26,6 +26,7 @@ function Main({ token }) {
 			/>
 			<LyricsBox token={token} title={songTitle} artist={songArtist} />
 			<Footer />
+
 		</div>
 	);
 }

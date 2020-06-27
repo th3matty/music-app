@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Album from './Album';
-import '../assets/main.css';
 import 'simplebar/dist/simplebar.min.css';
 import SimpleBar from 'simplebar-react';
 

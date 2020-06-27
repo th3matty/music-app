@@ -1,13 +1,16 @@
-import React from "react";
+// import React from "react";
 
-function Search_Modal() {
-  return (
-    <div className={"modal-wrapper"}>
-      <div className={"modal-backdrop"}>
-        <div className={"modal-box"}></div>
-      </div>
-    </div>
-  );
-}
+// function Search_Modal(props) {
 
-export default Search_Modal;
+//   onClick = (props) => {
+//     props.onRequestClose();
+//   };
+
+//   return (
+//     <div>
+//       <button onClick={this.onClick}> close</button>
+//     </div>
+//   );
+// }
+
+// export default Search_Modal;

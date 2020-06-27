@@ -41,7 +41,7 @@ function MiddleFrame({
 	}
 
 	return (
-		<div className="flex-1 overflow-y-auto bg-colorPallete_Blue h-screen relative p-8">
+		<div className="z-0  flex-1 overflow-y-auto bg-colorPallete_Blue h-screen relative p-8">
 			{/* ContentAREA //<-- TOPVIEW-->//*/}
 			<div>
 				<TopView
