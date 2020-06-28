@@ -4,6 +4,10 @@ import 'simplebar/dist/simplebar.min.css';
 import SimpleBar from 'simplebar-react';
 
 class TopView extends Component {
+
+	componentDidUpdate(){
+		console.log("TopmainView rendert")
+	}
 	// in dieser Component wird das Album für den Oberen Bereich im Main.js gerendert()
 	render() {
 		return (

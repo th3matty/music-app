@@ -88,3 +88,47 @@
 // 	  }
 
 
+// <div>
+//       <form>
+//         <div className="flex items-center mt-1">
+//           <div>
+//             {/* <li className="border-l-4 border-colorPallete_Blue"> */}
+//             <button onClick={openModal} className="flex -1 ml-5 mr-3">
+//               <img src={SearchIcon} className="mr-1" alt="SearchIcon" />
+//             </button>
+//             <Modal
+//               className="modal"
+//               style={customStyles}
+//               isOpen={modalIsOpen}
+//               onRequestClose={closeModal}
+//             >
+//               {/* <div>
+//                 <div className="modal-wrapper">
+//                   <div className="modal-backdrop" />
+//                   <div className="modal-box">                 */}
+//                     {/* <header className="bg-gray_aside">
+//                       <div>
+//                         <button onClick={closeModal}>
+//                           <img src={CloseButton} className="" alt="Close" />
+//                         </button>
+//                       </div>
+//                     </header> */}
+//                     {/* An dieser Stelle kann man auslagern. */}
+//                     {/* <SearchModal onRequestClose={closeModal}/> */}
+//                   {/* </div>
+//                 </div>
+//               </div> */}
+//             </Modal>
+//           </div>
+//           {/* </li> */}
+//           <input
+//             id="inputSearch"
+//             value={searchValue}
+//             onChange={(e) => handleChange(e.target.value)}
+//             type="text"
+//             className="py-2 mt-2 focus:bg-white focus:border-blue-400  hover:bg-colorPallete_LightGreen focus:outline-1 focus:shadow-outline border border-colorPallete_Blue rounded-lg appearance-none leading-normal text-colorPallete_Blue text-lg text-center "
+//           ></input>
+//         </div>
+//       </form>
+//     </div>
+  

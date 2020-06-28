@@ -32,6 +32,9 @@ function MiddleFrame({
 				setReleases(res.albums.items);
 			});
 	}, [token]);
+	useEffect(() => {
+		console.log("middleFrame rendert")
+	})
 
 	async function playTrack(uri) {
 		setPlay(false);

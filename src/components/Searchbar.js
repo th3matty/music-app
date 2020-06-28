@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import SearchIcon from "../assets/img/search.svg";
 import Modal from "react-modal";
-import "../assets/SearchModal.css";
-// import SearchModal from "./Search_Modal";
+// import "../assets/SearchModal.css";
+import CloseButton from "../assets/img/closeButton.svg";
+import SearchModal from "./Search_Modal";
 
-function Searchbar({ token }) {
+function Searchbar({ token , search }) {
   const [userSearch, setUserSeacher] = useState([]);
   const [searchValue, setSearchValue] = useState(null);
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -21,24 +22,18 @@ function Searchbar({ token }) {
         }
       )
         .then((res) => res.json())
-        .then((search) => {
-          console.log("artistSeach:", search.tracks.items);
+        .then((searchResult) => {
+          console.log("artistSeach:", searchResult.tracks.items);
           setUserSeacher(userSearch);
         });
     }
     getSearchContent();
   }, [searchValue, token, userSearch]);
 
-  const customStyles = {
-    content: {
-      top: "50%",
-      left: "50%",
-      right: "auto",
-      bottom: "auto",
-      marginRight: "-50%",
-      transform: "translate(-50%, -50%)",
-    },
-  };
+  useEffect(() => {
+		console.log("SearchBar rendert")
+	})
+
 
   const openModal = (e) => {
     e.preventDefault();
@@ -47,9 +42,9 @@ function Searchbar({ token }) {
     console.log(searchValue);
   };
 
-  const closeModal = () =>{
-    setIsOpen(false)
-  }
+  const closeModal = () => {
+    setIsOpen(false);
+  };
 
   const handleChange = (value) => {
     //value.preventDefault();
@@ -62,19 +57,30 @@ function Searchbar({ token }) {
       <form>
         <div className="flex items-center mt-1">
           <div>
-            {/* <li className="border-l-4 border-colorPallete_Blue"> */}
             <button onClick={openModal} className="flex -1 ml-5 mr-3">
               <img src={SearchIcon} className="mr-1" alt="SearchIcon" />
             </button>
-            <Modal style={customStyles} isOpen={modalIsOpen} onRequestClose={closeModal}>
-              {/* An dieser Stelle kann man auslagern. */}
-              {/* <SearchModal onRequestClose={closeModal}/> */}
-              <div>
-                <button onClick={closeModal}>X</button>
+            <Modal
+              style={customStyles}
+              isOpen={modalIsOpen}
+              onRequestClose={closeModal}
+            >
+              <div className="w-full">
+                <div className="flex justify-end">
+                  <header className="">
+                    <button onClick={closeModal} className="flex justify-end hover:pointer">
+                      <img src={CloseButton} className="" alt="Close" />
+                    </button>
+                  </header>
+                </div>
+                <hr className="bg-gray_aside mt-2"></hr>
+                <div className="w-full">                
+                  {/* An dieser Stelle kann man auslagern. */}
+                  <SearchModal userSearch={userSearch} searchValue={searchValue} search={search} />
+                </div>
               </div>
             </Modal>
           </div>
-          {/* </li> */}
           <input
             id="inputSearch"
             value={searchValue}
@@ -88,4 +94,20 @@ function Searchbar({ token }) {
   );
 }
 
+const customStyles = {
+  overlay: {
+    background: "rgba(0,0,0,0.7)",
+  },
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    height: "70%",
+    width: "60%",
+    marginRight: "-50%",
+    overflow: "auto",
+    transform: "translate(-50%, -50%)",
+  },
+};
 export default Searchbar;

@@ -11,6 +11,12 @@ class Aside extends Component {
 		super(props);
 		this.state = {};
 	}
+	componentDidUpdate(){
+		console.log("aside rendert")
+	}
+
+
+
 	render() {
 		return (
 			<div className="w-48 bg-gray_aside font-semibold text-sm text-gray-400">
@@ -33,7 +39,7 @@ class Aside extends Component {
 									</button>
 								</a>
 							{/* </li> */}
-							<SearchBar token={this.props.token} />
+							<SearchBar token={this.props.token} search={this.props.search} />
 						</ul>
 						<hr className="mt-3 mb-3"></hr>
 						<SimpleBar className="area" style={{ maxHeight: 500 }}>

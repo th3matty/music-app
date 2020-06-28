@@ -8,6 +8,12 @@ function Header({ token }) {
 	const [userPic, setUserPic] = useState(UserProfileIcon);
 
 	useEffect(() => {
+		console.log("Header rendert")
+	})
+
+
+
+	useEffect(() => {
 		async function getProfile() {
 			const response = await fetch('https://api.spotify.com/v1/me', {
 				headers: {

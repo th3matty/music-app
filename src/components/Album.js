@@ -1,8 +1,14 @@
-import React from 'react';
+import React , {useEffect}from 'react';
 import '../assets/main.css';
 import '../assets/album.css';
 
 function Album({ release, playTrack, setAlbumID, setPlaylistID }) {
+
+	useEffect(() => {
+		console.log("Album rendert")
+	})
+
+
 	return (
 		<div
 			className="flip-card m-2"

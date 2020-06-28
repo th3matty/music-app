@@ -19,6 +19,11 @@ function AlbumView({ token, albumID, setOffset, playTrack }) {
 			});
 	}, [albumID, token]);
 
+	useEffect(() => {
+		console.log("AlbumView rendert")
+	})
+
+
 	return (
 		<div className="flex flex-wrap justify-around mt-4">
 			<h3 className="w-full text-xl mb-4 text-colorPallete_LightGreen">{album && album.name}</h3>
