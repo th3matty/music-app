@@ -16,7 +16,10 @@ function AlbumView({ token, albumID, setOffset, playTrack }) {
 				console.log('album: ', album);
 				setAlbum(album);
 				setTrackCover(album.images[1].url);
-			});
+			})
+			.catch((error) => {
+				console.log(error)
+			  });
 	}, [albumID, token]);
 
 	useEffect(() => {
