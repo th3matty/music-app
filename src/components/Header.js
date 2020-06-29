@@ -31,7 +31,7 @@ function Header({ token }) {
   // console.log('userProfile:',userProfile)
 
   return (
-    <div className="w-56 absolute top-0 right-0 bg-colorPallete_Blue rounded-full py-0.5 px-8 flex items-center">
+    <div className="w-56 absolute top-0 right-0 bg-gray_aside py-0.5 px-8 flex items-center">
       <div className="flex-1 px-4 mt-1 py-2">
         <span className="text-colorPallete_LightGreen text-lg ">
           {userProfile.display_name}
