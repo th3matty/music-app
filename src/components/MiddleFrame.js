@@ -42,7 +42,7 @@ function MiddleFrame({
 
   return (
     <div
-      className="flex-1 overflow-y-auto bg-colorPallete_Blue h-screen relative p-8"
+      className="flex-1 bg-colorPallete_Blue flex flex-col justify-between "
       id="middleFrame"
     >
       {/* ContentAREA //<-- TOPVIEW-->//*/}
@@ -70,7 +70,7 @@ function MiddleFrame({
           />
         )}
       </div>
-      <div className="absolute bottom-0 inset-x-0">
+      <div className="w-full">
         <SpotifyPlayer
           token={token}
           uris={playURIs}

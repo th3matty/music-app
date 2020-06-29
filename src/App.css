@@ -50,5 +50,15 @@
 } */
 
 #middleFrame {
-    background: radial-gradient(circle, rgba(34, 87, 122, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: radial-gradient(circle, rgba(34, 87, 122, 1) -70%, rgba(0, 0, 0, 1) 100%);
+}
+
+#header {
+    background: radial-gradient(circle, rgb(12, 31, 44) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.mainLogo {
+    position: relative;
+    margin-left: 30;
+    float: left;
 }

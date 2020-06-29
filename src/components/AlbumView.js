@@ -26,7 +26,7 @@ function AlbumView({ token, albumID, setOffset, playTrack }) {
 				<img className="w-48 h-48" src={trackCover} alt="playlist album art" />
 			</div>
 
-			<SimpleBar style={{ maxHeight: 250, width: '60%', paddingRight: 10 }}>
+			<SimpleBar style={{ maxHeight: 200, width: '60%', paddingRight: 10 }}>
 				<div>
 					{album &&
 						album.tracks.items.map((item, index) => {

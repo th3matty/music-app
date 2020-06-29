@@ -65,14 +65,13 @@ class LyricsBox extends React.Component {
   render() {
     return (
       <div
-        className=" w-56 max-w-sm h-screen shadow-lg bg-gray_aside  overflow-x-hidden"
+        className=" w-56 max-w-sm shadow-lg bg-gray_aside overflow-y-hidden"
         id="lyricsBox"
       >
         {/* // Bitte untere Zeile noch nicht löschen // */}
         {/* <Header token={this.props.token}/> */}
         <div className="px-6 py-4">
-          <p className="italic text-gray_aside mt-20">
-            <hr></hr>
+          <p className="italic text-colorPallete_Blue">
             Album...
             <span className="font-extrabold text-colorPallete_Blue text-lg ">
               {this.state.album}

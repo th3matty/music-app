@@ -3,8 +3,9 @@ import Playlist from "./Playlist";
 import "../assets/aside.css";
 import HomeIcon from "../assets/img/home.svg";
 import "simplebar/dist/simplebar.min.css";
-import SimpleBar from "simplebar-react";
+/* import SimpleBar from "simplebar-react"; */
 import SearchBar from "./Searchbar";
+import Footer from "./Footer";
 
 class Aside extends Component {
   constructor(props) {
@@ -14,11 +15,10 @@ class Aside extends Component {
   render() {
     return (
       <div
-        className="w-48 bg-gray_aside font-semibold text-sm text-gray-400"
+        className="w-48 bg-gray_aside font-semibold text-sm text-gray-400 flex flex-col justify-between"
         id="aside"
       >
         <div className="py-6">
-          here comes our Logo
           <div className="">
             <ul className="right">
               <hr className="mt-3 mb-3"></hr>
@@ -35,15 +35,19 @@ class Aside extends Component {
               <SearchBar token={this.props.token} />
             </ul>
             <hr className="mt-3 mb-3"></hr>
-            <SimpleBar className="area" style={{ maxHeight: 500 }}>
-              <Playlist
-                token={this.props.token}
-                setPlaylistID={this.props.setPlaylistID}
-                setAlbumID={this.props.setAlbumID}
-              />
-            </SimpleBar>
+            {/*  <SimpleBar
+              className="area"
+              style={{ maxHeight: 500, paddingRight: 10, scrollbarMinSize: 0 }}
+            > */}
+            <Playlist
+              token={this.props.token}
+              setPlaylistID={this.props.setPlaylistID}
+              setAlbumID={this.props.setAlbumID}
+            />
+            {/* </SimpleBar> */}
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

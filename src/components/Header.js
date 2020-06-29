@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import UserProfileIcon from "../assets/img/userProfile.svg";
 import Logout from "../assets/img/logout.svg";
 import waait from "waait";
+import image from "../assets/img/Lyrisic_Artboard1.png";
 
 function Header({ token }) {
   const [userProfile, setUserProfile] = useState({});
@@ -31,22 +32,32 @@ function Header({ token }) {
   // console.log('userProfile:',userProfile)
 
   return (
-    <div className="w-56 absolute top-0 right-0 bg-gray_aside py-0.5 px-8 flex items-center">
-      <div className="flex-1 px-4 mt-1 py-2">
-        <span className="text-colorPallete_LightGreen text-lg ">
+    <div
+      className="h-1/10 bg-gray_aside py-0.5 px-8 flex justify-between"
+      id="header"
+    >
+      <div className="">
+        <img
+          className="mainLogo"
+          src={image}
+          alt="Main-Logo"
+          width="115"
+          height="115"
+        />
+      </div>
+      <div className="flex justify-around items-center w-64">
+        <span className="text-colorPallete_LightGreen text-l ">
           {userProfile.display_name}
         </span>
-        <a href="!#" className="  ">
-          <img
-            src={userPic}
-            className="w-10 h-10 rounded-full "
-            alt="UserProfileIcon"
-          />
-        </a>
-      </div>
-      <div className="">
+
+        <img
+          src={userPic}
+          className="w-10 h-10 rounded-full m-2 "
+          alt="UserProfileIcon"
+        />
+
         <a href="/">
-          <img src={Logout} className="mt-1 ml-1" alt="LogoutIcon" />
+          <img src={Logout} className="mt-1 ml-4" alt="LogoutIcon" />
         </a>
       </div>
     </div>
