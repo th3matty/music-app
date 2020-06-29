@@ -4,6 +4,12 @@ import Modal from "react-modal";
 import CloseButton from "../assets/img/closeButton.svg";
 import SimpleBar from "simplebar-react";
 
+// In this Component we fetch the "search-api" from  Spotify
+//  We rendering a Modal which display all searched Data from User
+// via hooks we can give away different props to different Sections above ( have a look at Aside.js - Component) ...
+// ... Aisde.js => Main.js => Middleframe.js => TopMainView.js // Album.js // 
+
+
 function Searchbar({ token, search, setAlbumID , setPlaylistID , setReleases}) {
   const [userSearch, setUserSearch] = useState();
   const [searchValue, setSearchValue] = useState(null);
@@ -91,7 +97,7 @@ function Searchbar({ token, search, setAlbumID , setPlaylistID , setReleases}) {
                 <hr className="bg-gray_aside mt-2"></hr>
                 <SimpleBar style={{ maxHeight: 500 }}>
                   <div className="w-full mt-1 overflow-x-hidden">
-                    {/* An dieser Stelle kann man auslagern. */}
+                    {/* At this point we could build a new Component for better readability */}
                     <div className="flex flex-wrap">
                       {!userSearch
                         ? ""
@@ -106,7 +112,6 @@ function Searchbar({ token, search, setAlbumID , setPlaylistID , setReleases}) {
                                   onClick={(e) => {
                                     e.preventDefault();
                                     console.log(item.id)
-                                    search()
                                     setAlbumID(item.id)
                                     setPlaylistID("")
                                     setReleases(userSearch)
@@ -136,6 +141,7 @@ function Searchbar({ token, search, setAlbumID , setPlaylistID , setReleases}) {
                             </div>
                           ))}
                     </div>
+                    {/* At this point above we could build a new Component for better readability */}
                   </div>
                 </SimpleBar>
               </div>
@@ -185,16 +191,3 @@ export default Searchbar;
 //                       search={search}
 //                       userSearchID={userSearch.id}
 //                     />
-{
-  /* <div className="w-full">
-                <div className="flex justify-end">
-                  <header className="">
-                    <button
-                      onClick={closeModal}
-                      className="flex justify-end hover:pointer"
-                    >
-                      <img src={CloseButton} className="" alt="Close" />
-                    </button>
-                  </header>
-                </div> */
-}

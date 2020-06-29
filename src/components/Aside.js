@@ -6,6 +6,10 @@ import "simplebar/dist/simplebar.min.css";
 import SimpleBar from "simplebar-react";
 import SearchBar from "./Searchbar";
 
+// Nothing special here in the Aside-Component
+// we received Data from Searchbar Component and reach it further a few level higher like mentioned in the SearchBar.js file
+
+
 class Aside extends Component {
   constructor(props) {
     super(props);
@@ -31,7 +35,12 @@ class Aside extends Component {
                   </span>
                 </button>
               </a>
-              <SearchBar token={this.props.token} search={this.props.search} setAlbumID={this.props.setAlbumID} setPlaylistID={this.props.setPlaylistID} setReleases={this.props.setReleases} />
+              <SearchBar
+                token={this.props.token}                
+                setAlbumID={this.props.setAlbumID}
+                setPlaylistID={this.props.setPlaylistID}
+                setReleases={this.props.setReleases}
+              />
             </ul>
             <hr className="mt-3 mb-3"></hr>
             <SimpleBar className="area" style={{ maxHeight: 500 }}>
