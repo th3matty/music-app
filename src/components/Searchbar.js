@@ -5,14 +5,13 @@ import CloseButton from "../assets/img/closeButton.svg";
 import SimpleBar from "simplebar-react";
 
 // In this Component we fetch the "search-api" from  Spotify
-//  We rendering a Modal which display all searched Data from User
+// We´re rendering a Modal which will display all searched Data from the Users input
 // via hooks we can give away different props to different Sections above ( have a look at Aside.js - Component) ...
-// ... Aisde.js => Main.js => Middleframe.js => TopMainView.js // Album.js // 
+// ... Aisde.js => Main.js => Middleframe.js => TopMainView.js // Album.js // AlbumView.js
 
-
-function Searchbar({ token, search, setAlbumID , setPlaylistID , setReleases}) {
-  const [userSearch, setUserSearch] = useState();
-  const [searchValue, setSearchValue] = useState(null);
+function Searchbar({ token, search, setAlbumID, setPlaylistID, setReleases }) {
+  const [userSearch, setUserSearch] = useState("");
+  const [searchValue, setSearchValue] = useState("");
   const [modalIsOpen, setIsOpen] = useState(false);
 
   async function getSearchContent() {
@@ -78,7 +77,7 @@ function Searchbar({ token, search, setAlbumID , setPlaylistID , setReleases}) {
             >
               <div className="w-full">
                 <div className="flex-1">
-                  <header className="">
+                  <header className=" flex justify-between items-center">
                     <h3 className="text-xl text-colorPallete_MintGreen mb-2">
                       {" "}
                       Your Results for{" "}
@@ -86,6 +85,18 @@ function Searchbar({ token, search, setAlbumID , setPlaylistID , setReleases}) {
                         {searchValue}
                       </span>{" "}
                     </h3>
+                    <form
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        getSearchContent(e.target.value);
+                      }}
+                    >
+                      <input
+                        onChange={(e) => handleChange(e.target.value)}
+                        className="py-2 mt-2 mr-10 focus:bg-white focus:border-blue-400  hover:bg-colorPallete_LightGreen focus:outline-1 focus:shadow-outline border border-colorPallete_Blue rounded-lg appearance-none leading-normal text-colorPallete_Blue text-lg text-center"
+                        placeholder="another search?"
+                      ></input>
+                    </form>
                     <button
                       onClick={closeModal}
                       className="absolute top-0 right-0 hover:pointer m-3"
@@ -111,11 +122,11 @@ function Searchbar({ token, search, setAlbumID , setPlaylistID , setReleases}) {
                                   className="hover:pointer"
                                   onClick={(e) => {
                                     e.preventDefault();
-                                    console.log(item.id)
-                                    setAlbumID(item.id)
-                                    setPlaylistID("")
-                                    setReleases(userSearch)
-                                    setIsOpen(false)
+                                    console.log(item.id);
+                                    setAlbumID(item.id);
+                                    setPlaylistID("");
+                                    setReleases(userSearch);
+                                    setIsOpen(false);
                                   }}
                                 >
                                   <img
@@ -177,6 +188,9 @@ const customStyles = {
   },
 };
 export default Searchbar;
+
+// Auslagerung: kann gelöscht werden!
+
 
 // const openModal = (e) => {
 //   e.preventDefault();
