@@ -31,7 +31,7 @@ class Aside extends Component {
                   </span>
                 </button>
               </a>
-              <SearchBar token={this.props.token} search={this.props.search} />
+              <SearchBar token={this.props.token} search={this.props.search} setAlbumID={this.props.setAlbumID} setPlaylistID={this.props.setPlaylistID} setReleases={this.props.setReleases} />
             </ul>
             <hr className="mt-3 mb-3"></hr>
             <SimpleBar className="area" style={{ maxHeight: 500 }}>

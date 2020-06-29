@@ -13,8 +13,12 @@ function MiddleFrame({
 	setPlaylistID,
 	albumID,
 	setAlbumID,
+	search,
+	releases,
+	setReleases,
+
 }) {
-	const [releases, setReleases] = useState([]);
+	// const [releases, setReleases] = useState([]);
 	const [playURIs, setPlayURIs] = useState([]);
 
 	const [play, setPlay] = useState(null);
@@ -28,10 +32,10 @@ function MiddleFrame({
 		})
 			.then(res => res.json())
 			.then(res => {
-				console.log(res.albums.items);
+				console.log('MiddleFrameFetch:',res.albums.items);
 				setReleases(res.albums.items);
 			});
-	}, [token]);
+	}, [setReleases, token]);
 	useEffect(() => {
 		console.log("middleFrame rendert")
 	})
@@ -42,6 +46,7 @@ function MiddleFrame({
 		setPlayURIs(uri);
 		setPlay(true);
 	}
+	
 
 	return (
 		<div className="z-0  flex-1 overflow-y-auto bg-colorPallete_Blue h-screen relative p-8">
@@ -52,6 +57,7 @@ function MiddleFrame({
 					releases={releases}
 					setAlbumID={setAlbumID}
 					setPlaylistID={setPlaylistID}
+					setReleases={setReleases}
 				/>
 				{playlistID && (
 					<PlaylistView

@@ -4,8 +4,8 @@ import Modal from "react-modal";
 import CloseButton from "../assets/img/closeButton.svg";
 import SimpleBar from "simplebar-react";
 
-function Searchbar({ token, search }) {
-  const [userSearch, setUserSearch] = useState(null);
+function Searchbar({ token, search, setAlbumID , setPlaylistID , setReleases}) {
+  const [userSearch, setUserSearch] = useState();
   const [searchValue, setSearchValue] = useState(null);
   const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -84,7 +84,6 @@ function Searchbar({ token, search }) {
                       onClick={closeModal}
                       className="absolute top-0 right-0 hover:pointer m-3"
                     >
-                    {/* flex-1 justify-end */}
                       <img src={CloseButton} className="" alt="Close" />
                     </button>
                   </header>
@@ -92,22 +91,10 @@ function Searchbar({ token, search }) {
                 <hr className="bg-gray_aside mt-2"></hr>
                 <SimpleBar style={{ maxHeight: 500 }}>
                   <div className="w-full mt-1 overflow-x-hidden">
-                    {/* <h3 className="text-xl text-colorPallete_MintGreen mb-2">
-                      {" "}
-                      Your Results for{" "}
-                      <span className="text-2xl text-colorPallete_Blue mb-2 ml-1 hover:font-bold">
-                        {searchValue}
-                      </span>{" "}
-                    </h3> */}
                     {/* An dieser Stelle kann man auslagern. */}
-
                     <div className="flex flex-wrap">
-                      {/* {!userSearch ? null : userSearch.map((item, index) => {
-                      return <p> {index} </p>
-                    })} */}
-
                       {!userSearch
-                        ? null
+                        ? ""
                         : userSearch.map((item, index) => (
                             <div
                               className="max-w-sm rounded overflow-hidden shadow-lg m-2"
@@ -118,6 +105,12 @@ function Searchbar({ token, search }) {
                                   className="hover:pointer"
                                   onClick={(e) => {
                                     e.preventDefault();
+                                    console.log(item.id)
+                                    search()
+                                    setAlbumID(item.id)
+                                    setPlaylistID("")
+                                    setReleases(userSearch)
+                                    setIsOpen(false)
                                   }}
                                 >
                                   <img
@@ -136,7 +129,7 @@ function Searchbar({ token, search }) {
                                   </p>
                                 </div>
                               </div>
-                              <hr className="bg-gray_aside mt-2 border-colorPallete_LightGreen w-3/4 m-8" ></hr>
+                              <hr className="bg-gray_aside mt-2 border-colorPallete_LightGreen w-3/4 m-8"></hr>
                               <div className="font-thin text-xs mb-1 text-center">
                                 {item.release_date}
                               </div>

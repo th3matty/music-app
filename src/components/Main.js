@@ -11,12 +11,15 @@ function Main({ token }) {
 	const [playlistID, setPlaylistID] = useState('');
 	const [albumID, setAlbumID] = useState('');
 	const [searchTest, setSearchTest] = useState(null)
+	const [releases, setReleases] = useState([]);
 
 	const search = (e)  =>{
-		//console.log(e)
-		
-		console.log(e.target.id)
-		setSearchTest(e.target.id)
+		console.log('aus Searchbar in Main angekommen:', e)
+		setSearchTest(e)
+		console.log(searchTest);
+		//setReleases(e)
+
+
 	}
 	// Have a look when it renders!!
 	useEffect(() => {
@@ -24,10 +27,9 @@ function Main({ token }) {
 	})
 
 	return (
-		<div className="flex flex-wrap">
-			<p> {searchTest} </p>
+		<div className="flex flex-wrap">			
 			<Header token={token} />
-			<Aside token={token} setPlaylistID={setPlaylistID} setAlbumID={setAlbumID} search={search} />			
+			<Aside token={token} setPlaylistID={setPlaylistID} setAlbumID={setAlbumID} search={search} setReleases={setReleases} />			
 			<MiddleFrame
 				token={token}
 				setTitle={setTitle}
@@ -36,6 +38,9 @@ function Main({ token }) {
 				setPlaylistID={setPlaylistID}
 				setAlbumID={setAlbumID}
 				albumID={albumID}
+				search={search}
+				releases={releases}
+				setReleases={setReleases}
 			/>
 			<LyricsBox token={token} title={songTitle} artist={songArtist} />
 			<Footer />
