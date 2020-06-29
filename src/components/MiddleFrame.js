@@ -49,16 +49,17 @@ function MiddleFrame({ token, setTitle, setArtist, playlistID }) {
           token={token}
           uris={playURIs}
           play={play}
+          showSaveIcon={true}
           offset={offset}
           callback={(data) => {
             setTitle(data.track.name);
             setArtist(data.track.artists);
           }}
           styles={{
-            bgColor: "#22577A",
-            color: "#fff",
-            loaderColor: "#fff",
-            sliderColor: "#1cb954",
+            bgColor: "#000",
+            color: "#80ED99",
+            loaderColor: "#80ED99",
+            sliderColor: "#80ED99",
             savedColor: "#fff",
             trackArtistColor: "#ccc",
             trackNameColor: "#fff",

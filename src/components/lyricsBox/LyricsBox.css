@@ -2,3 +2,7 @@
     width: 12%;
     border-radius: 5px;
 }
+
+.simplebar-scrollbar::before {
+    background-color: #80ED99;
+}

@@ -73,11 +73,11 @@ class LyricsBox extends React.Component {
 
   render() {
     return (
-      <div className=" w-56 max-w-sm h-screen shadow-lg bg-colorPallete_LightGreen  overflow-x-hidden">
+      <div className=" w-56 max-w-sm h-screen shadow-lg bg-gray_aside  overflow-x-hidden">
         {/* // Bitte untere Zeile noch nicht löschen // */}
         {/* <Header token={this.props.token}/> */}
         <div className="px-6 py-4">
-          <p className="italic text-gray_aside mt-20">
+          <p className="italic text-gray_aside mt-30">
             <hr></hr>
             Album...
             <span className="font-extrabold text-colorPallete_Blue text-lg ">
@@ -93,8 +93,8 @@ class LyricsBox extends React.Component {
             {this.state.trackName}
           </span>
           <hr className="mt-2"></hr>
-          <SimpleBar style={{ maxHeight: 400 }}>
-            <div className="text-base text-colorPallete_Blue text-align-justify mt-5 overflow-auto tracking-wider font-bold text-colorPallete_Blue content-center">
+          <SimpleBar id="simpleBarLyrics" style={{ maxHeight: 400 }}>
+            <div className="text-base text-colorPallete_LightGreen text-align-justify mt-5 overflow-auto tracking-wider font-bold text-colorPallete_Blue content-center">
               {this.state.lyrics}
             </div>
           </SimpleBar>
