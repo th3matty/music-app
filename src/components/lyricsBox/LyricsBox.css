@@ -1,7 +1,8 @@
-.lyricsBox {
-    color: black;
+#lyricsDiv {
+    width: 12%;
+    border-radius: 5px;
 }
 
-.lyrics {
-    text-align: center;
+.simplebar-scrollbar::before {
+    background-color: #80ED99;
 }
