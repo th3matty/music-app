@@ -1,31 +1,54 @@
 .start {
-  background: url("./assets/img/bg-concert.jpg") no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    background: url("./assets/img/bg.jpg") no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .start h1 {
-  font-size: 2em;
-  color: rgb(53, 47, 47);
+    font-size: 3em;
+    color: rgb(255, 255, 255);
 }
 
 .start button {
-  color: #fff;
-  cursor: pointer;
-
-  border: none;
-  box-shadow: grey 2px 2px 2px;
-  background: rgb(39, 219, 69);
-  padding: 10px 25px;
-  border-radius: 25px;
-  font-size: 1.5em;
-  font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to bottom right, #f8ff00 0%, #3ad59f 25%, #3a63d5 65%, #753ad5 100%);
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .start button:hover {
-  transform: scale(1.05);
+    transform: scale(1.02);
+    border: none;
+    outline: none;
+}
+
+.start button:active:after {
+    transform: scale(1.02);
+    border: none;
+    outline: none;
+}
+
+.logo {
+    background: url("./assets/img/Lyrisic_Artboard.png") no-repeat;
+}
+
+
+/* #aside {
+    background: linear-gradient(95deg, rgba(0, 0, 0, 1) 0%, rgba(34, 87, 122, 1) 100%);
+}
+
+#lyricsBox {
+    background: linear-gradient(270deg, rgba(0, 0, 0, 1) 0%, rgba(34, 87, 122, 1) 100%);
+} */
+
+#middleFrame {
+    background: radial-gradient(circle, rgba(34, 87, 122, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }

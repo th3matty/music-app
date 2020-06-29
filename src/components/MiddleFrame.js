@@ -41,7 +41,10 @@ function MiddleFrame({
   }
 
   return (
-    <div className="flex-1 overflow-y-auto bg-colorPallete_Blue h-screen relative p-8">
+    <div
+      className="flex-1 overflow-y-auto bg-colorPallete_Blue h-screen relative p-8"
+      id="middleFrame"
+    >
       {/* ContentAREA //<-- TOPVIEW-->//*/}
       <div>
         <TopView
@@ -79,13 +82,15 @@ function MiddleFrame({
             setArtist(data.track.artists);
           }}
           styles={{
-            bgColor: "#000",
+            bgColor:
+              "linear-gradient(to bottom right, #f8ff00 0%, #3ad59f 25%, #3a63d5 65%, #753ad5 100%);",
             color: "#80ED99",
             loaderColor: "#80ED99",
             sliderColor: "#80ED99",
-            savedColor: "#fff",
+            savedColor: "#red",
             trackArtistColor: "#ccc",
             trackNameColor: "#fff",
+            borderColor: "none",
           }}
         />
       </div>
