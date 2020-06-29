@@ -2,9 +2,16 @@ import React from 'react';
 import '../assets/main.css';
 import '../assets/album.css';
 
-function Album({ release, playTrack }) {
+function Album({ release, playTrack, setAlbumID, setPlaylistID }) {
 	return (
-		<div className="flip-card m-2" onClick={() => playTrack(release.uri)}>
+		<div
+			className="flip-card m-2"
+			onClick={() => {
+				playTrack(release.uri);
+				setAlbumID(release.id);
+				setPlaylistID('');
+			}}
+		>
 			<div className="inner flex">
 				<div className="front h-48 w-48 bg-cover rounded-t-lg text-center overflow-hidden">
 					<img src={release.images[1].url} alt={release.name} />

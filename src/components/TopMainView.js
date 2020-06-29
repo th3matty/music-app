@@ -14,7 +14,13 @@ class TopView extends Component {
 				<SimpleBar style={{ maxHeight: 1000, maxWidth: 1500 }}>
 					<div className="flex p-8">
 						{this.props.releases.map(release => (
-							<Album playTrack={this.props.playTrack} release={release} key={release.id} />
+							<Album
+								playTrack={this.props.playTrack}
+								release={release}
+								key={release.id}
+								setAlbumID={this.props.setAlbumID}
+								setPlaylistID={this.props.setPlaylistID}
+							/>
 						))}
 					</div>
 				</SimpleBar>
