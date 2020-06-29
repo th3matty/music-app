@@ -31,14 +31,12 @@ function Header({ token }) {
 	// console.log('userProfile:',userProfile)
 
 	return (
-		<div className="w-56 absolute top-0 right-0 bg-colorPallete_Blue rounded-full py-0.5 px-8 flex items-center">
-			<div className="flex-1 px-4 mt-1 py-2">
+		<div className="h-1/10 bg-gray_aside py-0.5 px-8 flex items-center justify-end">
+			<div className="flex justify-around items-center w-48">
 				<span className="text-colorPallete_LightGreen text-lg ">{userProfile.display_name}</span>
 				<a href="!#" className="  ">
 					<img src={userPic} className="w-10 h-10 rounded-full " alt="UserProfileIcon" />
-				</a>
-			</div>
-			<div className="">
+				</a>			
 				<a href="/">
 					<img src={Logout} className="mt-1 ml-1" alt="LogoutIcon" />
 				</a>

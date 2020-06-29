@@ -41,7 +41,7 @@ function MiddleFrame({
 	}
 
 	return (
-		<div className="flex-1 overflow-y-auto bg-colorPallete_Blue h-screen relative p-8">
+		<div className="flex-1 flex flex-col justify-between overflow-y-auto bg-colorPallete_Blue">
 			{/* ContentAREA //<-- TOPVIEW-->//*/}
 			<div>
 				<TopView
@@ -62,7 +62,7 @@ function MiddleFrame({
 					<AlbumView token={token} albumID={albumID} playTrack={playTrack} setOffset={setOffset} />
 				)}
 			</div>
-			<div className="absolute bottom-0 inset-x-0">
+			<div className="w-full">
 				<SpotifyPlayer
 					token={token}
 					uris={playURIs}

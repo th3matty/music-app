@@ -64,7 +64,7 @@ class LyricsBox extends React.Component {
 
 	render() {
 		return (
-			<div className=" w-56 max-w-sm h-screen shadow-lg bg-colorPallete_LightGreen  overflow-x-hidden">
+			<div className=" w-56 max-w-sm shadow-lg bg-colorPallete_LightGreen  overflow-x-hidden">
 				{/* // Bitte untere Zeile noch nicht löschen // */}
 				{/* <Header token={this.props.token}/> */}
 				<div className="px-6 py-4">

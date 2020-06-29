@@ -5,6 +5,7 @@ import HomeIcon from '../assets/img/home.svg';
 import 'simplebar/dist/simplebar.min.css';
 import SimpleBar from 'simplebar-react';
 import SearchBar from './Searchbar';
+import Footer from './Footer'
 
 class Aside extends Component {
 	constructor(props) {
@@ -13,7 +14,7 @@ class Aside extends Component {
 	}
 	render() {
 		return (
-			<div className="w-48 bg-gray_aside font-semibold text-sm text-gray-400">
+			<div className="w-48 bg-gray_aside font-semibold text-sm text-gray-400 flex flex-col justify-between">
 				<div className="py-6">
 					here comes our Logo
 					<div className="">
@@ -41,6 +42,7 @@ class Aside extends Component {
 						</SimpleBar>
 					</div>
 				</div>
+				<Footer />
 			</div>
 		);
 	}

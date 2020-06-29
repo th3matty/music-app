@@ -21,7 +21,7 @@ function PlaylistView({ token, playlistID, playTrack, setOffset }) {
 	}, [playlistID, token]);
 
 	return (
-		<div className="flex flex-wrap justify-around mt-4">
+		<div className="flex flex-wrap justify-around mt-4 pl-2">
 			<h3 className="w-full text-xl mb-4 text-colorPallete_LightGreen">
 				{playlist && playlist.name}
 			</h3>
@@ -29,7 +29,7 @@ function PlaylistView({ token, playlistID, playTrack, setOffset }) {
 				<img className="w-48 h-48" src={trackCover} alt="playlist album art" />
 			</div>
 
-			<SimpleBar style={{ maxHeight: 250, width: '60%', paddingRight: 10 }}>
+			<SimpleBar style={{ maxHeight: 200, width: '60%', paddingRight: 10 }}>
 				<div>
 					{playlist &&
 						playlist.tracks.items.map((item, index) => {

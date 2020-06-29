@@ -8,7 +8,7 @@ class TopView extends Component {
 	// in dieser Component wird das Album für den Oberen Bereich im Main.js gerendert()
 	render() {
 		return (
-			<div>
+			<div className='pl-2 pt-2'>
 				<h3 className="text-2xl text-colorPallete_LightGreen">New Releases</h3>
 
 				<SimpleBar style={{ maxHeight: 1000, maxWidth: 1500 }}>
