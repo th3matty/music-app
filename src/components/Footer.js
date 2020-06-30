@@ -4,6 +4,7 @@ import Modal from "react-modal";
 import CloseButton from "../assets/img/closeButton.svg";
 import Heart from "../assets/img/heart.svg";
 import image from "../assets/img/Lyrisic_Artboard1.png";
+
 // In this Component we´re rendering the footer. Which got a SVG in it.
 // OnClick (svg) a Modal will open with a short message from us :)
 
@@ -13,8 +14,6 @@ function Footer() {
     console.log("Footer rendert");
   });
 
-  //const [aboutUs, setAboutUs] = useState({});
-  //useEffect(() => {})
 
   const openModal = (e) => {
     e.preventDefault();
@@ -103,10 +102,8 @@ const customStyles = {
     left: "50%",
     right: "auto",
     bottom: "auto",
-    // height: "70%",
     width: "30%",
-    height: "auto",
-    // marginRight: "-50%",
+    height: "auto",   
     overflow: "auto",
     transform: "translate(-50%, -50%)",
   },

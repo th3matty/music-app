@@ -1,5 +1,9 @@
 import React from "react";
 import image from "../assets/img/Lyrisic_Artboard1.png";
+
+// Our Landing Page
+// User should press the Login Button to join our App
+
 function Start({ getToken }) {
   return (
     <div className="start">
