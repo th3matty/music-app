@@ -5,6 +5,10 @@ import waait from "waait"; // https://www.npmjs.com/package/waait
 import PlaylistView from "./PlaylistView";
 import AlbumView from "./AlbumView";
 
+// In this Component we get via FETCH the api.
+// via hooks we setStates for different Sections and transfer it via props
+// TopView Component -, PlaylistVierw, Album and Spotifyplayer
+
 function MiddleFrame({
   token,
   setTitle,
@@ -13,8 +17,10 @@ function MiddleFrame({
   setPlaylistID,
   albumID,
   setAlbumID,
+  releases,
+  setReleases,
 }) {
-  const [releases, setReleases] = useState([]);
+  // const [releases, setReleases] = useState([]);
   const [playURIs, setPlayURIs] = useState([]);
 
   const [play, setPlay] = useState(null);
@@ -28,10 +34,13 @@ function MiddleFrame({
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res.albums.items);
+        console.log("MiddleFrameFetch:", res.albums.items);
         setReleases(res.albums.items);
       });
-  }, [token]);
+  }, [setReleases, token]);
+  useEffect(() => {
+    console.log("middleFrame rendert");
+  });
 
   async function playTrack(uri) {
     setPlay(false);
@@ -52,6 +61,7 @@ function MiddleFrame({
           releases={releases}
           setAlbumID={setAlbumID}
           setPlaylistID={setPlaylistID}
+          setReleases={setReleases}
         />
         {playlistID && (
           <PlaylistView

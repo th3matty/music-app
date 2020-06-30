@@ -1,10 +1,14 @@
-import React from "react";
+import React, {useEffect}  from "react";
 // import React, { useState, useEffect } from "react";
 import aboutUs from "../assets/img/aboutUs.svg";
 
 
 
 export default function Footer() {
+
+  useEffect(() => {
+		console.log("Footer rendert")
+	})
 
     //const [aboutUs, setAboutUs] = useState({});
     //useEffect(() => {})
