@@ -107,7 +107,7 @@ function Searchbar({ token, search, setAlbumID, setPlaylistID, setReleases }) {
                 </div>
                 <hr className="bg-gray_aside mt-2"></hr>
                 <SimpleBar style={{ maxHeight: 500 }}>
-                  <div className="w-full mt-1 overflow-x-hidden">
+                  <div className="w-full mt-1 overflow-hidden">
                     {/* At this point we could build a new Component for better readability */}
                     <div className="flex flex-wrap">
                       {!userSearch
@@ -171,6 +171,7 @@ function Searchbar({ token, search, setAlbumID, setPlaylistID, setReleases }) {
   );
 }
 
+// CustomStyle for Modal
 const customStyles = {
   overlay: {
     background: "rgba(0,0,0,0.7)",
