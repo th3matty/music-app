@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import SimpleBar from "simplebar-react";
 
-//in this component we show the selected album in the middle frame, as the playlistView component. "for the futur, combining the two components"
+//in this component we show the selected album in the middle frame, as the playlistView component. 
+//("for the futur, combining the two components")
 
 function AlbumView({ token, albumID, setOffset, playTrack }) {
   const [album, setAlbum] = useState(null);

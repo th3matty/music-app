@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import "../assets/main.css";
 import "../assets/album.css";
 
+// This Component renders in the beginning the "New Releases" and 
+// as well other Albums , like if you´re searching
+
 function Album({ release, playTrack, setAlbumID, setPlaylistID }) {
   useEffect(() => {
     console.log("Album rendert");
