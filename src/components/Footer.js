@@ -43,9 +43,12 @@ function Footer() {
             <span className="text-base text-colorPallete_Blue mb-2 ml-1 ">
               {" "}
               About Us...
-			  <p className="text-xs"> Three highly motivated young professionals on their way doin awesome stuff</p>
+              <p className="text-xs mt-1">
+                {" "}
+                Three highly motivated young professionals on their way doin'
+                awesome stuff
+              </p>
             </span>{" "}
-			
             <button
               onClick={closeModal}
               className="absolute top-0 right-0 hover:pointer m-3"
