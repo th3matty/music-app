@@ -93,7 +93,7 @@ function Searchbar({ token, search, setAlbumID, setPlaylistID, setReleases }) {
                     >
                       <input
                         onChange={(e) => handleChange(e.target.value)}
-                        className="py-2 mt-2 mr-10 focus:bg-white focus:border-blue-400  hover:bg-colorPallete_LightGreen focus:outline-1 focus:shadow-outline border border-colorPallete_Blue rounded-lg appearance-none leading-normal text-colorPallete_Blue text-lg text-center"
+                        className="py-1 mt-2 mr-10 focus:bg-white focus:border-blue-400  hover:bg-colorPallete_LightGreen focus:outline-1 focus:shadow-outline border border-colorPallete_Blue rounded-lg appearance-none leading-normal text-colorPallete_Blue text-lg text-center"
                         placeholder="another search?"
                       ></input>
                     </form>
@@ -191,17 +191,9 @@ export default Searchbar;
 
 // Auslagerung: kann gelöscht werden!
 
-
 // const openModal = (e) => {
 //   e.preventDefault();
 //   setIsOpen(true);
 //   console.log("button works");
 //   console.log(searchValue);
 // };
-
-// <SearchModal
-//                       userSearch={userSearch}
-//                       searchValue={searchValue}
-//                       search={search}
-//                       userSearchID={userSearch.id}
-//                     />

@@ -15,18 +15,18 @@ class Aside extends Component {
   componentDidUpdate() {
     console.log("aside rendert");
   }
-
+  url = window.location.href;
   render() {
     return (
       <div
         id="aside"
-        className=" w-48 bg-gray_aside font-semibold text-sm text-gray-400 flex flex-col justify-between"
+        className="w-48 bg-gray_aside font-semibold text-sm text-gray-400 flex flex-col justify-between"
       >
         <div className="py-6">
           <div className="">
             <ul className="right">
               <hr className="mt-3 mb-3"></hr>
-              <a href="#!" className="flex items-center mx-5 mt-4">
+              <a href={this.url} className="flex items-center mx-5 mt-4">
                 <img src={HomeIcon} className="mr-2" alt="HomeIcon" />
                 <button id="homeBtn" className=" ml-2">
                   <span className="text-colorPallete_LightGreen text-lg hover:font-bold">
