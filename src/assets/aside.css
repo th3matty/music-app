@@ -1,15 +1,10 @@
 #homeBtn {
-  border-radius: 2px;
+    border-radius: 2px;
 }
+
 #inputSearch {
-  width: 110px;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    width: 110px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-/* .area {
-  padding: 1rem;
-  background: white;
-  height: 250px;
-  overflow: auto;
-} */
