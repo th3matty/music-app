@@ -3,7 +3,6 @@ import Playlist from "./Playlist";
 import "../assets/aside.css";
 import HomeIcon from "../assets/img/home.svg";
 import "simplebar/dist/simplebar.min.css";
-// import SimpleBar from "simplebar-react";
 import SearchBar from "./Searchbar";
 import Footer from "./Footer";
 
@@ -42,13 +41,12 @@ class Aside extends Component {
               />
             </ul>
             <hr className="mt-3 mb-3"></hr>
-            {/* <SimpleBar className="area" style={{ maxHeight: 500 }}> */}
+
             <Playlist
               token={this.props.token}
               setPlaylistID={this.props.setPlaylistID}
               setAlbumID={this.props.setAlbumID}
             />
-            {/* </SimpleBar> */}
           </div>
         </div>
         <Footer />

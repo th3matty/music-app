@@ -3,7 +3,7 @@ import Album from "./Album";
 import "simplebar/dist/simplebar.min.css";
 import SimpleBar from "simplebar-react";
 
-// in this Component wie render the Album.js - Component ( see as well Album.js). This will be displayed in the upper section of Main.js 
+// in this Component we render the Album.js - Component ( see as well Album.js). This will be displayed in the upper section of Main.js
 // Fetching API happens one level higher. See Middleframe.js - Component
 
 class TopView extends Component {

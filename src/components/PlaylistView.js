@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
 
+//in this section we show 100 songs from the selected playlist on the middle frame
+
 function PlaylistView({ token, playlistID, playTrack, setOffset }) {
   const [playlist, setPlaylist] = useState(null);
   const [trackCover, setTrackCover] = useState(null);

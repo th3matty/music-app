@@ -37,7 +37,6 @@ class LyricsBox extends React.Component {
             res.message.body.track.instrumental === 1 &&
             res.message.body.track.has_lyrics === 0
           ) {
-            console.log(res.message.body.track);
             this.setState({
               lyrics: "This song is instrumental, enjoy the music !!! ",
             });
@@ -46,7 +45,6 @@ class LyricsBox extends React.Component {
             res.message.body.track.instrumental === 0 &&
             res.message.body.track.has_lyrics === 0
           ) {
-            console.log(res.message.body.track);
             this.setState({
               lyrics: "Sorry, We don't have the lyrics for this song yet :(",
             });

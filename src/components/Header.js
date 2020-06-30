@@ -29,8 +29,6 @@ function Header({ token }) {
     getProfile();
   }, [token]);
 
-  // console.log('userProfile:',userProfile)
-
   return (
     <div
       className="h-1/10 bg-gray_aside py-0.5 px-8 flex justify-between"
