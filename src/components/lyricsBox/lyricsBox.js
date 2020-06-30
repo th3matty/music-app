@@ -2,12 +2,12 @@ import React from "react";
 import "./LyricsBox.css";
 import "simplebar/dist/simplebar.min.css";
 import SimpleBar from "simplebar-react";
-// import Header from '../Header'
+
+ // In This Component we´re fetching our Lyrics and rendering it as well
+  // JSX Lyrics imported in Main.js
 
 class LyricsBox extends React.Component {
-  // In dieser Component rufen wir die Lyrics ab!
-  // Positonierung rechts am Bildschirm
-
+ 
   constructor(props) {
     super(props);
     this.state = {
@@ -73,8 +73,6 @@ class LyricsBox extends React.Component {
         className=" w-56 max-w-sm shadow-lg bg-gray_aside overflow-y-hidden"
         id="lyricsBox"
       >
-        {/* // Bitte untere Zeile noch nicht löschen // */}
-        {/* <Header token={this.props.token}/> */}
         <div className="px-6 py-4">
           <p className="italic text-colorPallete_Blue">
             Album...

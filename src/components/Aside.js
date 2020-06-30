@@ -6,6 +6,10 @@ import "simplebar/dist/simplebar.min.css";
 import SearchBar from "./Searchbar";
 import Footer from "./Footer";
 
+// This Component renders the left Side of our Page
+// We can find in deeper Level the Searchbar and the Playlist
+// Some of their props are identical!
+
 class Aside extends Component {
   constructor(props) {
     super(props);

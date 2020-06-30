@@ -5,6 +5,7 @@ import CloseButton from "../assets/img/closeButton.svg";
 import Heart from "../assets/img/heart.svg";
 import image from "../assets/img/Lyrisic_Artboard1.png";
 import copyRight from "..//assets/copyRight.svg";
+
 // In this Component we´re rendering the footer. Which got a SVG in it.
 // OnClick (svg) a Modal will open with a short message from us :)
 
@@ -103,10 +104,8 @@ const customStyles = {
     left: "50%",
     right: "auto",
     bottom: "auto",
-    // height: "70%",
     width: "30%",
     height: "auto",
-    // marginRight: "-50%",
     overflow: "auto",
     transform: "translate(-50%, -50%)",
   },
