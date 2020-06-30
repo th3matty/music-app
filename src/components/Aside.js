@@ -15,7 +15,7 @@ class Aside extends Component {
   componentDidUpdate() {
     console.log("aside rendert");
   }
-
+  url = window.location.href;
   render() {
     return (
       <div
@@ -26,7 +26,7 @@ class Aside extends Component {
           <div className="">
             <ul className="right">
               <hr className="mt-3 mb-3"></hr>
-              <a href="#!" className="flex items-center mx-5 mt-4">
+              <a href={this.url} className="flex items-center mx-5 mt-4">
                 <img src={HomeIcon} className="mr-2" alt="HomeIcon" />
                 <button id="homeBtn" className=" ml-2">
                   <span className="text-colorPallete_LightGreen text-lg hover:font-bold">
@@ -43,11 +43,11 @@ class Aside extends Component {
             </ul>
             <hr className="mt-3 mb-3"></hr>
             {/* <SimpleBar className="area" style={{ maxHeight: 500 }}> */}
-              <Playlist
-                token={this.props.token}
-                setPlaylistID={this.props.setPlaylistID}
-                setAlbumID={this.props.setAlbumID}
-              />
+            <Playlist
+              token={this.props.token}
+              setPlaylistID={this.props.setPlaylistID}
+              setAlbumID={this.props.setAlbumID}
+            />
             {/* </SimpleBar> */}
           </div>
         </div>

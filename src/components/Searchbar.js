@@ -192,7 +192,6 @@ export default Searchbar;
 
 // Auslagerung: kann gelöscht werden!
 
-
 // const openModal = (e) => {
 //   e.preventDefault();
 //   setIsOpen(true);
