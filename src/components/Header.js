@@ -56,7 +56,7 @@ function Header({ token }) {
           alt="UserProfileIcon"
         />
 
-        <a href="http://localhost:8888/login">
+        <a href="https://lyrisic.herokuapp.com/login">
           <img src={Logout} className="mt-1 ml-4" alt="LogoutIcon" />
         </a>
       </div>
