@@ -50,7 +50,8 @@
 } */
 
 #middleFrame {
-    background: radial-gradient(circle, rgba(34, 87, 122, 1) -70%, rgba(0, 0, 0, 1) 100%);
+    background-image: radial-gradient(circle at bottom, rgb(34, 87, 122, 0.6)-30%, rgb(37, 94, 133, 0.6), rgb(1, 106, 138, 0.5), rgb(0, 115, 149, 0.5) -90%, rgb(0, 202, 170, 0.4), rgb(91, 190, 169, 0.8), rgb(91, 190, 132, 0.08), rgb(43, 42, 42, 1), #000000 75%);
+    ;
 }
 
 #header {
@@ -61,4 +62,26 @@
     position: relative;
     margin-left: 30;
     float: left;
+    -webkit-animation: spin 6s linear infinite;
+    -moz-animation: spin 6s linear infinite;
+    animation: spin 6s linear infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }

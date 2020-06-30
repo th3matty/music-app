@@ -51,7 +51,7 @@ function MiddleFrame({
 
   return (
     <div
-      className="flex-1 bg-colorPallete_Blue flex flex-col justify-between "
+      className=" flex-1 bg-colorPallete_Blue flex flex-col justify-between "
       id="middleFrame"
     >
       {/* ContentAREA //<-- TOPVIEW-->//*/}
