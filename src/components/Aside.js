@@ -20,7 +20,7 @@ class Aside extends Component {
     return (
       <div
         id="aside"
-        className="w-48 bg-gray_aside font-semibold text-sm text-gray-400 flex flex-col justify-between"
+        className=" w-48 bg-gray_aside font-semibold text-sm text-gray-400 flex flex-col justify-between"
       >
         <div className="py-6">
           <div className="">
@@ -43,11 +43,11 @@ class Aside extends Component {
             </ul>
             <hr className="mt-3 mb-3"></hr>
             {/* <SimpleBar className="area" style={{ maxHeight: 500 }}> */}
-              <Playlist
-                token={this.props.token}
-                setPlaylistID={this.props.setPlaylistID}
-                setAlbumID={this.props.setAlbumID}
-              />
+            <Playlist
+              token={this.props.token}
+              setPlaylistID={this.props.setPlaylistID}
+              setAlbumID={this.props.setAlbumID}
+            />
             {/* </SimpleBar> */}
           </div>
         </div>
