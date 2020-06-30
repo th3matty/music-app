@@ -50,7 +50,6 @@ function Searchbar({ token, search, setAlbumID, setPlaylistID, setReleases }) {
   };
 
   const handleChange = (value) => {
-    //value.preventDefault();
     setSearchValue(value);
     console.log("search for", value);
   };

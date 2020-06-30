@@ -4,6 +4,11 @@ import Logout from "../assets/img/logout.svg";
 import waait from "waait";
 import image from "../assets/img/Lyrisic_Artboard1.png";
 
+// Our Header fetches the UsersProfile Pic from Spotify
+// and as well the name
+// next to it the logout Button which redirect the users to spotifiies authentification-site
+
+
 function Header({ token }) {
   const [userProfile, setUserProfile] = useState({});
   const [userPic, setUserPic] = useState(UserProfileIcon);
@@ -28,8 +33,6 @@ function Header({ token }) {
     }
     getProfile();
   }, [token]);
-
-  // console.log('userProfile:',userProfile)
 
   return (
     <div

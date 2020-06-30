@@ -4,6 +4,10 @@ import Header from "./Header";
 import LyricsBox from "./lyricsBox/lyricsBox";
 import MiddleFrame from "./MiddleFrame.js";
 
+// This is the Main Component, as the name says. 
+// Its divided in three (3) sections
+// Header // Aside-left // MiddleFrame // and to the right => LyricsBox
+
 function Main({ token }) {
   const [songTitle, setTitle] = useState("");
   const [songArtist, setArtist] = useState("");

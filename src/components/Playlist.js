@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import SimpleBar from "simplebar-react";
 
+// here we show the user's playlists on the aside component, the playlists been fetched from the spotify api
+
 function Playlist({ token, setPlaylistID, setAlbumID }) {
   const [playlists, setPlaylists] = useState([]);
 

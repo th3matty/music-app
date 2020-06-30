@@ -4,6 +4,8 @@ import Modal from "react-modal";
 import CloseButton from "../assets/img/closeButton.svg";
 import Heart from "../assets/img/heart.svg";
 import image from "../assets/img/Lyrisic_Artboard1.png";
+import copyRight from "..//assets/copyRight.svg";
+
 // In this Component we´re rendering the footer. Which got a SVG in it.
 // OnClick (svg) a Modal will open with a short message from us :)
 
@@ -12,9 +14,6 @@ function Footer() {
   useEffect(() => {
     console.log("Footer rendert");
   });
-
-  //const [aboutUs, setAboutUs] = useState({});
-  //useEffect(() => {})
 
   const openModal = (e) => {
     e.preventDefault();
@@ -26,7 +25,7 @@ function Footer() {
 
   return (
     <div className="px-4 py-2 bg-gray_aside flex items-center">
-      <a href="!#" className="">
+      <a href="" className="">
         <img
           src={aboutUs}
           className="mt-2 ml-2 mb-2"
@@ -42,14 +41,12 @@ function Footer() {
         <div className="w-full">
           <header className=" flex justify-between items-center">
             <span className="text-base text-colorPallete_Blue mb-2 ml-1 ">
-              {" "}
               About Us...
               <p className="text-xs mt-1">
-                {" "}
                 Three highly motivated young professionals on their way doin'
                 awesome stuff
               </p>
-            </span>{" "}
+            </span>
             <button
               onClick={closeModal}
               className="absolute top-0 right-0 hover:pointer m-3"
@@ -73,7 +70,7 @@ function Footer() {
               <div className="">
                 <ul className="text-base text-colorPallete_LightBlue">
                   <li>
-                    <a href="https://github.com/osamaAlhaj">Osama</a>{" "}
+                    <a href="https://github.com/osamaAlhaj">Osama</a>
                   </li>
                   <li>
                     <a href="https://github.com/Pensor">Paddy</a>
@@ -84,6 +81,10 @@ function Footer() {
                 </ul>
                 <hr className="bg-gray_aside mt-2"></hr>
                 <p>Stay put...more features are coming :)</p>
+                <p className="absolute bottom-0 right-0 text-xs flex flex-1 mr-1">
+                  <img className="mr-1" src={copyRight} alt="copyRight"></img>
+                  Logo by Waseem Hajj Khaled
+                </p>
               </div>
             </div>
           </div>
@@ -103,10 +104,8 @@ const customStyles = {
     left: "50%",
     right: "auto",
     bottom: "auto",
-    // height: "70%",
     width: "30%",
     height: "auto",
-    // marginRight: "-50%",
     overflow: "auto",
     transform: "translate(-50%, -50%)",
   },
