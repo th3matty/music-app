@@ -46,6 +46,7 @@ function AlbumView({ token, albumID, setOffset, playTrack }) {
                     setOffset(index);
                     playTrack(album.uri);
                   }}
+                  key={item.id}
                 >
                   <span className="text-green-100">
                     {index + 1}. {item.name}
