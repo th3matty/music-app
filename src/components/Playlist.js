@@ -14,6 +14,9 @@ function Playlist({ token, setPlaylistID, setAlbumID }) {
         .then((res) => res.json())
         .then((playlists) => {
           setPlaylists(playlists.items);
+        })
+        .catch((error) => {
+          console.log(error);
         });
     }
     getPlaylists();

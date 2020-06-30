@@ -17,6 +17,9 @@ function PlaylistView({ token, playlistID, playTrack, setOffset }) {
         console.log("playlist: ", playlist);
         setPlaylist(playlist);
         setTrackCover(playlist.images[0].url);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }, [playlistID, token]);
 
